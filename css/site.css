@@ -5381,5 +5381,21 @@ thead {
     #impersonationWrapper p {
       margin: 0.25em 0.5em; } }
 
+a img {
+  border: none; }
+
 body {
-  background-color: #5b7183; }
+  background-color: #8394a1; }
+
+header {
+  overflow: hidden; }
+  header.primary {
+    background-color: #fff;
+    padding: 10px; }
+  header h1 {
+    color: #688465;
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase; }
+    header h1 strong {
+      font-size: 31px; }

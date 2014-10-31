@@ -2,9 +2,32 @@
 @import "../components/colonial-branding/scss/branding-cla.scss";
 // endbower
 
+a {
+    img {
+      border: none; 
+    }
+  }
+
 
 body {
 	background-color: $pewter;
+}
+
+header {
+	overflow: hidden;
+	&.primary {
+		background-color: #fff;
+		padding: 10px;
+	}
+	h1 {
+		color: $moss;
+		float: right;
+		font-size: 20px;
+		text-transform: uppercase;
+		strong {
+			font-size: 31px;
+		}
+	}
 }
 
 
