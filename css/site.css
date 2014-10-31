@@ -5403,14 +5403,21 @@ header {
     header h1 strong {
       font-size: 31px; }
 
+main {
+  padding: 10px; }
+
 .action {
   padding: 0;
-  margin: 0;
-  width: 100%;
-  overflow: hidden; }
+  margin: 0; }
   .action li {
+    background-color: #5b7183;
+    border: 1px solid red;
+    text-align: center;
     width: 50%;
     display: inline-block;
-    padding: 0;
-    background-color: #5b7183; }
+    padding: 5px;
+    margin: 0; }
+    .action li:nth-child(2n) {
+      float: right;
+      clear: left; }
 
