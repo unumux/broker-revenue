@@ -5387,6 +5387,9 @@ a img {
 body {
   background-color: #8394a1; }
 
+.logo {
+  width: 50px; }
+
 header {
   overflow: hidden; }
   header.primary {
@@ -5399,3 +5402,15 @@ header {
     text-transform: uppercase; }
     header h1 strong {
       font-size: 31px; }
+
+.action {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden; }
+  .action li {
+    width: 50%;
+    display: inline-block;
+    padding: 0;
+    background-color: #5b7183; }
+
