@@ -3,17 +3,5 @@
 
 header {
 	overflow: hidden;
-	&.primary {
-		background-color: #fff;
-		padding: 10px;
-	}
-	h1 {
-		color: $moss;
-		float: right;
-		font-size: 20px;
-		text-transform: uppercase;
-		strong {
-			font-size: 31px;
-		}
-	}
+	padding: 30px;
 }
