@@ -15,92 +15,63 @@
             
         </header>
         <main>
-           <section>
-            <h1>Multiply Your Revenue</h1>
-            <p>
-                See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment.See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment<sup>1</sup>. 
-            </p>
-            <section id="calculatorInput" class="slider interaction">
-                <div id="accountsInput" class="input">
-                    <input type="text" id="numberOfAccounts" value="12" pattern="[0-9]*">
-                    <label id="accountsLabel">Accounts</label>
-                    <div id="accountsSlider" class="">
-                        <div class="" style="width: 11.2244897959184%;"></div>
-                        <a href="#" class="" style="left: 11.2244897959184%;"></a>
-                    </div>
-                    <div class="slider-wrap">
-                        <div class="slider noUi-target noUi-ltr noUi-horizontal noUi-background">
-                            <div class="noUi-base">
-                                <div class="noUi-origin noUi-stacking" style="left: 75%;">
-                                    <div class="noUi-handle noUi-handle-lower">
-                                        <div class="slider-tooltip">
-                                            <div class="tooltip-arrow-up"></div>
-                                            <span>75%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+           <article>
+                <h1>Multiply Your Revenue</h1>
+                <p>
+                    See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment.See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment<sup>1</sup>. 
+                </p>
+                <section class="interaction">
+                    <div id="accountsInput" class="input">
+                        <label for="numberOfAccounts" id="accountsLabel">Accounts</label>
+                        <input type="text" id="numberOfAccounts" value="12" pattern="[0-9]*">
+                        
+                        <div id="accountSlider" class="slider account">
+                           <div id="sliderAccount"></div>
+                           <div id="slider-range-value"></div>
                         </div>
                     </div>
-                </div>
-                <div id="calculatorPlus">x</div>
-                <div id="employeesInput">
+                    <div class="math">x</div>
+                    <div id="employeesInput" class="input">
+                        <label for="numberOfEmployees" id="employeesLabel">Employees per account</label>
+                        <input type="text" id="numberOfEmployees" value="100" pattern="[0-9]*">
+                        <div id="employeesSlider" class="slider employee">
+                        </div>
+                    </div>
+                    <div class="math">=</div>
+                    <div id="commissionsInput" class="input">
+                        <label for="personalComission" id="commissionLabel"></label>
+                        <input type="text" id="personalCommission" readonly="readonly">
+                    </div>
+                    <div class="action">
+                        <p class="note">Click here to find the missing <strong>46%</strong> of your VB Revenue!</p>
+                        <a class="action submit" id="callToAction" href="broker-calculator/broker-calculator.html" title="View the detailed commission calculator"></a>
+                        <button  id="callToAction" name="calculate" value="CalculateMyEarnings">
+                            Calculate My Earnings!
+                        </button>
+                    </div>
+                </section>
 
-                    <input type="text" id="numberOfEmployees" value="100" pattern="[0-9]*">
-                    <label id="employeesLabel">Employees <span class="mobileHide">per account</span></label>
-                    <div id="employeesSlider" class="slider">
-                        <div class="" style="width: 9.91983967935872%;"></div>
-                        <a href="#" class="ui-slider-handle ui-state-default ui-corner-all" style="left: 9.91983967935872%;"></a>
-                    </div>
-                    <div class="slider-wrap">
-                        <div class="slider noUi-target noUi-ltr noUi-horizontal noUi-background">
-                            <div class="noUi-base">
-                                <div class="noUi-origin noUi-stacking" style="left: 75%;">
-                                    <div class="noUi-handle noUi-handle-lower">
-                                        <div class="slider-tooltip">
-                                            <div class="tooltip-arrow-up"></div>
-                                            <span>75%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="calculatorEquals">=</div>
-                <div id="commissionsInput">
-                    <input type="text" id="personalCommission" readonly="readonly">
-                    <label id="commissionLabel">
-                    </label>
-                </div>
-                <div id="showMe">
-                    <p>Click here to find the missing <strong>46%</strong> of your VB Revenue!</p>
-                    <a class="boxShadow" id="callToAction" href="broker-calculator/broker-calculator.html" title="View the detailed commission calculator"></a>
-                </div>
-            </section>
-            <button id="callToAction" name="calculate" value="CalculateMyEarnings">
-                Calculate My Earnings!
-            </button>
-           </section>
-           <section>
-                <ul>
-                    <li>
-                        <article>
-                            <h1>Section heading</h1> 
-                            <section>Section content</section>
-                        </article>
-                    </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-           </section>
+               <section>
+                    <ul>
+                        <li>
+                            <article>
+                                <h1>Section heading</h1> 
+                                <section>Section content</section>
+                            </article>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+               </section>
+            </article>
         </main>
         <footer>
         </footer>
 
         <!-- begin:js --><script src="//localhost:35729/livereload.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/jquery.nouislider.js"></script>
 <script src="js/script-brokerRevenue.js"></script><!-- end:js -->
 
     </body>
