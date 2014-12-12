@@ -25,3 +25,9 @@
 .logo {
 	width: 50px;
 }
+
+header {
+	&.primary {
+		text-align: center;
+	}
+}
