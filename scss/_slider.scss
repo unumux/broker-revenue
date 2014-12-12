@@ -1,0 +1,29 @@
+//	Header
+//--------------------------------
+
+.interaction {
+	.input {
+		overflow: hidden;
+		input {
+			display: inline;
+			float: right;
+			width: 20%;
+		}
+	}
+	.action {
+		border-top: 1px solid blue;
+		clear: both;
+	}
+	.math {
+
+		font-family: "Oswald light", helvetica, san-serif;
+		font-size: 36px;
+		font-weight: 300;
+		text-align: center;
+	}
+	.slider {
+		border-bottom: 1px solid grey;
+		clear: both;
+	}
+
+}
