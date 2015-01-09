@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Broker Revenue 2.0</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <!-- begin:css --><link rel="stylesheet" type="text/css" href="css/site.css"><!-- end:css -->
+        <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
+    </head>
+    <body>
+ <h1 class="title">Multiply Your Revenue!</h1>
+            <div id="tabs">
+                <ul class="tabs noprint">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#byAccount">By Account</a></li>
+                </ul>
+                <div id="overview" class="tabCntr">
+                    <div id="numbersRow">
+                        <div class="floatLeft width80 marginLeft25">
+                            <div id="noAccounts">1</div>
+                            <span>VB Accounts</span>
+                        </div>
+                        <div class="floatLeft marginLeft30 multiply">
+                            <img src="css/images/ui-multiply-sign.png" height="59" width="36" alt="" class="noprint"/>
+                        </div>
+                        <div class="floatLeft width130 marginLeft35">
+                            <div id="noEmployees">10</div>
+                            <span>Employees Each</span>
+                        </div>
+                        <div class="floatLeft marginLeft10 equal">
+                            <img src="css/images/ui-equal-sign.png" height="59" width="40" alt="" class="noprint"/>
+                        </div>
+                        <div class="floatLeft marginLeft10">
+                            <div class="firstYearRevenue width315">$0</div>
+                            <span>Potential 1st-Year VB Commissions <span class="normalText">(based on assumptions below)</span><sup>1</sup></span>
+                        </div>
+                        <div class="clearBoth"></div>
+                    </div>
+                    <div id="controlsRow" class="noprint">
+                        <div class="sliderCntr"><div id="slider1"></div></div>
+                        <div class="sliderCntr"><div id="slider2"></div></div>
+                        <button id="calculateBtn" class="marginLeft105">Compare Your Earnings</button>
+                    </div>
+                </div>
+                <div id="byAccount" class="tabCntr">
+                    <div class="leftCol">
+                        <div class="titleText bottomBorder">Number of Employees</div>
+                        <ul id="accounts">
+                            <!--<li id="account_1"><span class="removeBtn" onclick="removeAccount(1);">X</span><span class="accountName">Account 1</span> <input type="text" id="Text1" maxlength="3" /></li>-->
+                            <li id="addAccount"><span class="errorMsg">Please enter a number.</span><span class="accountName">Account 1</span> <input type="text" id="addAcct" maxlength="5" /><a href="javascript:void(0);" onclick="addAccount();" class="addAcctBtn">Add</a></li>
+                        </ul>
+                    </div>
+                    <div class="rightCol marginLeft170 width350">
+                        <div id="titleText" class="titleText">Potential 1st-Year VB Commissions <span class="normalText">(based on assumptions below)</span><sup>1</sup></div>
+                        <div class="firstYearRevenue"></div>
+                        <button id="calculateBtn2" class="marginLeft80 marginTop10">Compare Your Earnings</button>
+                    </div>
+                    <div class="clearBoth"></div>
+                </div>
+            </div>
+            <div id="introHolder">
+                <img src="css/images/intro-graph-bars.png" height="147" width="934" alt="" />
+                <div id="threeColHolder">
+                    <div class="threeCol marginLeft20">
+                        <h3>Increase participation!</h3>
+                        <img src="css/images/icon-shaking-hands.png" height="56" width="90" class="alignCenter marginTop10 marginBottom14" alt="" />
+                        <p>
+                            Our personal 1-to-1 approach produces higher participation and understanding, generating more revenue for you.
+                        </p>
+                    </div>
+                    <div class="threeCol marginLeft30">
+                        <h3>Get A Bigger Piece of the Pie!</h3>
+                        <img src="css/images/icon-pie-chart.png" height="65" width="65" class="alignCenter marginTop10 marginBottom5" alt="" />
+                        <p>
+                            We have some of the highest net commissions in the worksite industry.
+                        </p>
+                    </div>
+                    <div class="threeCol marginLeft30">
+                        <h3>Earn Long-Term Revenue!</h3>
+                        <img src="css/images/icon-airplane.png" height="63" width="68" class="alignCenter marginTop10 marginBottom7" alt="" />
+                        <p>
+                            Our investment in new hires and re-enrollments, creates high "first-year commissions" year after year. With our guarunteed-renewable products, you'll earn commissions for life.
+                        </p>
+                    </div>
+                    <div class="clearBoth"></div>
+                </div>
+            </div>
+            <div id="reportHolder">
+                <div id="firstCol" class="floatLeft marginTop30">
+                    <div class="rowTitle graphKey marginTop135 noprint">Your Time <sup>2</sup></div>
+                    <div id="empPart" class="rowTitle marginTop55">Employee Participation</div>
+                    <div class="rowTitle marginTop22">Annual Premium Per Employee <sup>2</sup></div>
+                    <div class="rowTitle marginTop80">Net Commissions<sup>5</sup><br /><br /><span class="normalText">1st Year – Annual New Business Commission Earnings.<br /> <br /> 5th Year – Annual New Business & Renewal Commission Earnings</span></div>
+                </div>
+                <div id="secondCol" class="floatLeft marginTop30">
+                    <h4>Self Enroll</h4>
+                    <p>Little or no personal contact. Voluntary buy-up options for core benefits.</p>
+                    <div class="noprint"><span class="threeQuarterChart"></span></div>
+                    <div class="particpationPercent">26%<sup>3</sup></div>
+                    <div class="annualPremium">$216</div>
+                    <div class="chartContainer">
+                        <div class="chartValue">$5,000</div>
+                        <div class="chartValue secondChartValue">$11,000</div>
+                        <div class="clearBoth"></div>          
+                        <div class="chart"></div>
+                        <div class="chart secondChart"></div>
+                        <div class="clearBoth"></div>
+                        <div class="chartLegend">1st Year</div>
+                        <div class="chartLegend secondChartLegend">5th Year</div>
+                        <div class="clearBoth"></div>                             
+                    </div>
+                </div>
+                <div id="thirdCol" class="floatLeft marginTop30">
+                    <h4>Self Enroll</h4>
+                    <p>Little or no personal contact. Voluntary products.</p>
+                    <div class="noprint"><span class="threeQuarterChart"></span></div>
+                    <div class="particpationPercent">26%<sup>3</sup></div>
+                    <div class="annualPremium">$432</div>
+                    <div class="chartContainer">
+                        <div class="chartValue">$10,000</div>
+                        <div class="chartValue secondChartValue">$14,000</div>
+                        <div class="clearBoth"></div>          
+                        <div class="chart"></div>
+                        <div class="chart secondChart"></div>
+                        <div class="clearBoth"></div>                    
+                        <div class="chartLegend">1st Year</div>
+                        <div class="chartLegend secondChartLegend">5th Year</div>
+                        <div class="clearBoth"></div>                             
+                    </div>
+                </div>
+                <div id="fourthCol" class="floatLeft marginTop30">
+                    <h4>Group Enrollment</h4>
+                    <p>One person enrolls a group. Voluntary products.</p>
+                    <div class="noprint"><span class="oneHalfChart"></span></div>
+                    <div class="particpationPercent">39%<sup>3</sup></div>
+                    <div class="annualPremium">$432</div>
+                    <div class="chartContainer">
+                        <div class="chartValue">$25,000</div>
+                        <div class="chartValue secondChartValue">$41,000</div>
+                        <div class="clearBoth"></div>          
+                        <div class="chart"></div>
+                        <div class="chart secondChart"></div>
+                        <div class="clearBoth"></div>                    
+                        <div class="chartLegend">1st Year</div>
+                        <div class="chartLegend secondChartLegend">5th Year</div>
+                        <div class="clearBoth"></div>                             
+                    </div>
+                </div>
+                <div id="fifthCol" class="floatLeft marginTop30">
+                    <h4>Enrollment Firm</h4>
+                    <p>One-on-one contact initially. Voluntary and/or core products.</p>
+                    <div class="noprint"><span class="oneHalfChart"></span></div>
+                    <div class="particpationPercent">38%<sup>3</sup></div>
+                    <div class="annualPremium">$707</div>
+                    <div class="chartContainer">
+                        <div class="chartValue">$47,000</div>
+                        <div class="chartValue secondChartValue">$141,000</div>
+                        <div class="clearBoth"></div>          
+                        <div class="chart"></div>
+                        <div class="chart secondChart"></div>
+                        <div class="clearBoth"></div>                    
+                        <div class="chartLegend">1st Year<sup>5</sup></div>
+                        <div class="chartLegend secondChartLegend">5th Year<sup>5</sup></div>
+                        <div class="clearBoth"></div>                             
+                    </div>
+                </div>
+                <div id="shapeCol" class="floatLeft">
+                </div>
+                <div id="colonialCol" class="floatLeft">
+                    <h3>Colonial Life Enrollment</h3>
+                    <p>1-to-1 benefits counseling. Voluntary and/or core products.</p>
+                    <div class="noprint"><span class="oneQuarterChart"></span></div>
+                    <div class="particpationPercent">50%<sup>4</sup></div>
+                    <div class="annualPremium">$707</div>
+                    <div class="chartContainer">
+                        <div class="chartValue">$57,000</div>
+                        <div class="chartValue secondChartValue">$1,141,000</div>
+                        <div class="clearBoth"></div>                                            
+                        <div class="chart"></div>
+                        <div class="chart secondChart"></div>
+                        <div class="clearBoth"></div>                  
+                        <div class="chartLegend">1st Year</div>
+                        <div class="chartLegend secondChartLegend">5th Year</div>
+                        <div class="clearBoth"></div>                                            
+                    </div>
+                </div>
+                <div class="clearBoth"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="bigText">
+                <span class="blueText">Let's Talk Numbers... Yours!</span>
+            </div>
+            <div class="blueText floatLeft marginBottom14">
+                <h4><a href="mailto:BrokerNews@coloniallife.com?subject=Broker Revenue Message">Email us</a>. Or fill out our <a href="http://www.pages02.net/coloniallife/BrokerMicrosite/testform2">contact form</a> and we’ll call you.</h4>
+<!--                <h4>Contact us for a personalized evaluation.</h4>
+                <p>We’ll tell you how much you can earn based on your personal business book and goals. Also, you can earn substantially more with renewal and bonus commissions. We’ll show you how much.</p>
+                <h4>Don't put this off!</h4>
+                <p>Competition in voluntary benefits is growing. Call us today to find out how our personal voluntary benefits approach can help you slam the door on competitors and keep your clients happy year after year.</p>-->
+            </div>
+            <div class="clearBoth"></div>
+            <p class="smallerText marginTop30"><strong>Privacy, Legal and Disclosure Notices</strong></p>
+            <p class="smallerText"><sup>1</sup> Assumptions: Product mix includes all of Colonial Life's products; 75% collected premium rate; 50% participation; $707 in annual premium per payer. </p>
+            <p class="smallerText"><sup>2</sup> Source: Colonial Life data based on May 2010 - April 2011 enrollments.</p>
+            <p class="smallerText"><sup>3</sup> Source: Voluntary Participation Rates, Spotlight Report, August 2010, Eastbridge Consulting Group, Inc.</p>
+            <p class="smallerText"><sup>4</sup> Source: Colonial Life Enrollment Data: Colonial Life data based on top 75% of cases with 1-to-1 working conditions.</p>
+            <p class="smallerText"><sup>5</sup> Assumptions: Product mix includes all of Colonial Life's products; 75% collected premium rate. Enrollment firm net commission after 70% split of gross commission to enrollment firm.</p>
+            <p class="smallerText">All compensation projections are for illustrative purposes only. Results will vary based on actual performance levels and other factors such as state, product and sales mix, persistency and timing of premium collections. Typically, Colonial Life will collect 70-80% of annualized sales premium on submitted business. This is the property of Colonial Life & Accident Insurance Company. Colonial Life has not authorized any use other than for illustrative purposes.</p>
+            <p class="smallerText">&copy;2011 Colonial Life & Accident Insurance Company<br />Colonial Life products are underwritten by Colonial Life & Accident Insurance Company. Coverage may vary by state and may not be available in all states. Colonial Life is the marketing brand of Colonial Life & Accident Insurance Company.</p>
+            <p class="smallerText">In New York, similar products and services, if approved, are underwritten by a Colonial Life affiliate, The Paul Revere Life Insurance Company.</p>
+        </div>
+    </div>
+
+        <!-- begin:js --><script src="//localhost:35729/livereload.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/jquery.nouislider.js"></script>
+<script src="js/script-brokerRevenue.js"></script><!-- end:js -->
+
+    </body>
+</html>
