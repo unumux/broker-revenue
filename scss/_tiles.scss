@@ -1,0 +1,32 @@
+.tiles h2 {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.tiles h2, .tile-details h3 {
+  clear: both;
+}
+
+.tile-summary {
+  width: 33%;
+  float: left;
+  padding: 15px;
+
+  h3 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+}
+
+.tile-details {
+  padding: 15px;
+}
+
+.tile-details h3, .tile-summary h3 {
+  font-size: 1.2em;
+}
+
+hr {
+  clear: both;
+}

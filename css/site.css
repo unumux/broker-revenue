@@ -5390,34 +5390,6 @@ img {
 .logo {
   width: 50px; }
 
-<<<<<<< HEAD
-main {
-  padding: 10px; }
-
-a img {
-  border: none; }
-
-body {
-  background-color: #8394a1; }
-
-.logo {
-  width: 50px; }
-
-header {
-  overflow: hidden; }
-  header.primary {
-    background-color: #fff;
-    padding: 10px; }
-  header h1 {
-    color: #688465;
-    float: right;
-    font-size: 20px;
-    text-transform: uppercase; }
-    header h1 strong {
-      font-size: 31px; }
-
-=======
->>>>>>> 5f54d0697c8b22999f72401d44fbfc391054a9c5
 main {
   padding: 10px; }
 
@@ -5443,36 +5415,5 @@ h1 {
       float: right;
       clear: left; }
 
-<<<<<<< HEAD
-header {
-  overflow: hidden; }
-  header.primary {
-    background-color: #fff;
-    padding: 10px; }
-  header h1 {
-    color: #688465;
-    float: right;
-    font-size: 20px;
-    text-transform: uppercase; }
-    header h1 strong {
-      font-size: 31px; }
-
-.action {
-  padding: 0;
-  margin: 0; }
-  .action li {
-    background-color: #5b7183;
-    border: 1px solid red;
-    text-align: center;
-    width: 50%;
-    display: inline-block;
-    padding: 5px;
-    margin: 0; }
-    .action li:nth-child(2n) {
-      float: right;
-      clear: left; }
-
-=======
->>>>>>> 5f54d0697c8b22999f72401d44fbfc391054a9c5
 .logo {
   width: 50px; }
