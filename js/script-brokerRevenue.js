@@ -323,41 +323,41 @@ var
 
 
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-	$("#sliderAccount").noUiSlider({
-		start: [ 20000 ],
-		step: 1000,
-		range: {
-			'min': [ 20000 ],
-			'max': [ 80000 ]
-		},
-		format: wNumb({
-			decimals: 3,
-			thousand: '.',
-			postfix: ' (US $)',
-		})
-	});
+// 	$("#sliderAccount").noUiSlider({
+// 		start: [ 20000 ],
+// 		step: 1000,
+// 		range: {
+// 			'min': [ 20000 ],
+// 			'max': [ 80000 ]
+// 		},
+// 		format: wNumb({
+// 			decimals: 3,
+// 			thousand: '.',
+// 			postfix: ' (US $)',
+// 		})
+// 	});
 
-	$("#sliderAccount").noUiSlider({
-		start: [ 20 ],
-		step: 10,
-		range: {
-			'min': [ 20 ],
-			'max': [ 80 ]
-		},
-		format: {
-		  to: function ( value ) {
-			return value + ',-';
-		  },
-		  from: function ( value ) {
-			return value.replace(',-', '');
-		  }
-		}
-	});
+// 	$("#sliderAccount").noUiSlider({
+// 		start: [ 20 ],
+// 		step: 10,
+// 		range: {
+// 			'min': [ 20 ],
+// 			'max': [ 80 ]
+// 		},
+// 		format: {
+// 		  to: function ( value ) {
+// 			return value + ',-';
+// 		  },
+// 		  from: function ( value ) {
+// 			return value.replace(',-', '');
+// 		  }
+// 		}
+// 	});
 
-	console.log($("#sliderAccount").val());
+// 	console.log($("#sliderAccount").val());
 
-	$("#sliderAccount").Link("lower").to($("#numberOfAccounts"));
+// 	$("#sliderAccount").Link("lower").to($("#numberOfAccounts"));
 
-});
+// });

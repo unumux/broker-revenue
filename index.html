@@ -8,6 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
         <!-- begin:css --><link rel="stylesheet" type="text/css" href="css/site.css"><!-- end:css -->
         <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="js/jquery.nouislider.js"></script>
+        <script src="js/nouislider.liblink.js"></script>
+        <script src="js/nouislider.wNumb.js"></script>
     </head>
     <body>
         <header class="primary">
@@ -22,8 +26,34 @@
                 </p>
                 <section class="interaction">
                     <div id="accountsInput" class="input">
-                        <label for="numberOfAccounts" id="accountsLabel">Accounts</label>
-                        <input type="text" id="numberOfAccounts" value="12" pattern="[0-9]*">
+                        <label for="numberOfAccounts">Accounts</label>
+                        <input type="text" id="number-of-accounts">
+
+                         
+                          <div id="account-input-slider" class="slider"></div>
+
+                          <script>
+                            var slider = $('#account-input-slider');
+                            var input = $('#number-of-accounts');
+
+                            slider.noUiSlider({
+                                start: [12],
+                                step: 1,
+                                range: {
+                                    'min': [0],
+                                    'max': [100]
+                                },
+                                format: wNumb (
+                                    {decimals: 0}
+                                )
+                                
+                            });
+
+                            slider.Link('lower').to(input);
+                          </script>
+                          
+                          
+                        
                         
                         <div id="accountSlider" class="slider account">
                            <div id="sliderAccount"></div>
