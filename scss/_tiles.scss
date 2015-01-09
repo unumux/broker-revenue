@@ -1,32 +1,71 @@
-.tiles h2 {
-  font-size: 1.4em;
-  text-align: center;
+.mosaic {
+    overflow: hidden;
+    padding: 1em 0;
+    .indent {
+        width: 100%;
+        > ul {
+            list-style: none;
+            width: 100%;
+            padding: 1em;
+            overflow: hidden;
+            li {
+               display: block;
+               &:nth-child(1) {
+                    border-bottom: 1px solid $charcoal;
+                }
+            }
+        }  
+    }
+    
+    h1 {
+        color: $steel-blue;
+        font-size: 26px;
+    }
+    article {
+        background-color: lighten($slate, 10%);
+        padding: 1em;        
+        min-height: 200px;
+        &:hover {
+            background-color: lighten($slate, 20%);
+        }
+        h1 {
+          margin: 0;
+        }
+    }
 }
 
-.tiles h2, .tile-details h3 {
-  clear: both;
+.expand {
+  display: none;
 }
 
-.tile-summary {
-  width: 33%;
-  float: left;
-  padding: 15px;
+@media screen and (min-width: 1024px) {
+  .mosaic {
+      background-color: $tangerine;
+      .indent {
+          width: 940px;
+          margin: 0 auto;
+          > ul {
+              li {
+                  &:nth-child(1) {
+                      border-bottom: 1px solid $charcoal;
+                      clear: both;
+                      width: 100%;
+                  }
+                  &:nth-child(2n) {
+                      clear: left;
+                      float: left;
+                      width: 50%;
+                  }
+                  &:nth-child(2n+3) {
+                      float: right;
+                      width: 50%;
+                      clear: right;
+                  }
+                      &:hover {
 
-  h3 {
-    text-align: center;
-    margin-top: 0;
+                  }
+              }
+          }  
+      }
   }
-  
-}
-
-.tile-details {
-  padding: 15px;
-}
-
-.tile-details h3, .tile-summary h3 {
-  font-size: 1.2em;
-}
-
-hr {
-  clear: both;
 }
