@@ -2,71 +2,86 @@
     overflow: hidden;
     padding: 1em 0;
     .indent {
-        width: 100%;
-        > ul {
-            list-style: none;
-            width: 100%;
-            padding: 1em;
-            overflow: hidden;
-            li {
-               display: block;
-               &:nth-child(1) {
-                    border-bottom: 1px solid $charcoal;
-                }
-            }
-        }  
+        width: 100%;  
     }
-    
     h1 {
         color: $steel-blue;
         font-size: 26px;
     }
     article {
         background-color: lighten($slate, 10%);
-        padding: 1em;
-        min-height: 200px;
+        padding: 0;
         &:hover {
             background-color: lighten($slate, 20%);
         }
         h1 {
-          margin: 0;
+           margin: 0;
         }
     }
 }
 
-.modal-content {
-    overflow: hidden;
+.tiles {
+    list-style: none;
+    padding: 0;
+    li {
+        display: block;
+        &:nth-child(1) {
+            border-bottom: 1px solid $charcoal;
+        }
+    }
 }
 
+.modal-dialog {
+    .modal-content {
+        overflow: hidden;
+        ul {
+            list-type: none;
+            li {
+                display: block;
+            }
+        }
+    }
+}
+
+.tile {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    header {
+        min-height: 200px;
+        padding: 1em 1em 0;
+    }
+}
 
 @media screen and (min-width: 1024px) {
-  .mosaic {
-      background-color: $tangerine;
-      .indent {
-          width: 940px;
-          margin: 0 auto;
-          > ul {
-              li {
-                  &:nth-child(1) {
-                      border-bottom: 1px solid $charcoal;
-                      clear: both;
-                      width: 100%;
-                  }
-                  &:nth-child(2n) {
-                      clear: left;
-                      float: left;
-                      width: 50%;
-                  }
-                  &:nth-child(2n+3) {
-                      float: right;
-                      width: 50%;
-                      clear: right;
-                  }
-                      &:hover {
+    .mosaic {
+        background-color: $tangerine;
+        .indent {
+            width: 940px;
+            margin: 0 auto;           
+        }
+    }
 
-                  }
-              }
-          }  
-      }
-  }
+    .tiles {
+        > .tile {
+            padding: 0;
+            &:nth-child(1) {
+                border-bottom: 1px solid $charcoal;
+                clear: both;
+                width: 100%;
+            }
+            &:nth-child(2n) {
+                clear: left;
+                float: left;
+                width: 50%;
+            }
+            &:nth-child(2n+3) {
+                float: right;
+                width: 50%;
+                clear: right;
+            }
+        }
+    } 
 }

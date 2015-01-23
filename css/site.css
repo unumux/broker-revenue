@@ -5566,29 +5566,41 @@ header {
   padding: 1em 0; }
   .mosaic .indent {
     width: 100%; }
-    .mosaic .indent > ul {
-      list-style: none;
-      width: 100%;
-      padding: 1em;
-      overflow: hidden; }
-      .mosaic .indent > ul li {
-        display: block; }
-        .mosaic .indent > ul li:nth-child(1) {
-          border-bottom: 1px solid #1f3340; }
   .mosaic h1 {
     color: #265b80;
     font-size: 26px; }
   .mosaic article {
     background-color: #738b9e;
-    padding: 1em;
-    min-height: 200px; }
+    padding: 0; }
     .mosaic article:hover {
       background-color: #91a4b3; }
     .mosaic article h1 {
       margin: 0; }
 
-.modal-content {
+.tiles {
+  list-style: none;
+  padding: 0; }
+  .tiles li {
+    display: block; }
+    .tiles li:nth-child(1) {
+      border-bottom: 1px solid #1f3340; }
+
+.modal-dialog .modal-content {
   overflow: hidden; }
+  .modal-dialog .modal-content ul {
+    list-type: none; }
+    .modal-dialog .modal-content ul li {
+      display: block; }
+
+.tile {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
+  .tile header {
+    min-height: 200px;
+    padding: 1em 1em 0; }
 
 @media screen and (min-width: 1024px) {
   .mosaic {
@@ -5596,18 +5608,20 @@ header {
     .mosaic .indent {
       width: 940px;
       margin: 0 auto; }
-      .mosaic .indent > ul li:nth-child(1) {
-        border-bottom: 1px solid #1f3340;
-        clear: both;
-        width: 100%; }
-      .mosaic .indent > ul li:nth-child(2n) {
-        clear: left;
-        float: left;
-        width: 50%; }
-      .mosaic .indent > ul li:nth-child(2n+3) {
-        float: right;
-        width: 50%;
-        clear: right; } }
+  .tiles > .tile {
+    padding: 0; }
+    .tiles > .tile:nth-child(1) {
+      border-bottom: 1px solid #1f3340;
+      clear: both;
+      width: 100%; }
+    .tiles > .tile:nth-child(2n) {
+      clear: left;
+      float: left;
+      width: 50%; }
+    .tiles > .tile:nth-child(2n+3) {
+      float: right;
+      width: 50%;
+      clear: right; } }
 
 h1 {
   color: #7f2725; }
