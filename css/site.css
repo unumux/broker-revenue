@@ -5587,8 +5587,8 @@ header {
     .mosaic article h1 {
       margin: 0; }
 
-.expand {
-  display: none; }
+.modal-content {
+  overflow: hidden; }
 
 @media screen and (min-width: 1024px) {
   .mosaic {

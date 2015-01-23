@@ -23,7 +23,7 @@
     }
     article {
         background-color: lighten($slate, 10%);
-        padding: 1em;        
+        padding: 1em;
         min-height: 200px;
         &:hover {
             background-color: lighten($slate, 20%);
@@ -34,9 +34,10 @@
     }
 }
 
-.expand {
-  display: none;
+.modal-content {
+    overflow: hidden;
 }
+
 
 @media screen and (min-width: 1024px) {
   .mosaic {
