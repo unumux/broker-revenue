@@ -5456,6 +5456,16 @@ img {
 main {
   padding: 10px; }
 
+.form-toggle {
+  align-content: center;
+  background: #7f2725;
+  cursor: pointer;
+  display: flex;
+  height: 75px;
+  padding: 15px; }
+  .form-toggle h4 {
+    color: #fff; }
+
 header {
   overflow: hidden;
   padding-top: 30px; }
