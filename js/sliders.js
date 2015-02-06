@@ -58,6 +58,18 @@ var slider = {
   commission: null
 };
 
+/* this function handles rounding the calculated numbers and adding commas and dollar signs. */
+function displayPrettyAmount(amount) {
+    var amt = Math.round(amount / 100) * 100;
+    var strValue = "";
+    strValue += amt;
+    var objRegExp = new RegExp('(-?[0-9]+)([0-9]{3})');
+    while (objRegExp.test(strValue)) {
+        strValue = strValue.replace(objRegExp, '$1,$2');
+    }
+    return "$" + strValue;
+}
+
 
 
 var updateCommission = function () {
@@ -65,17 +77,16 @@ var updateCommission = function () {
   slider.employees = $('#number-of-employees').val();
   slider.accounts = $('#number-of-accounts').val();
   
-  slider.commission = slider.accounts * 
+  var commission = slider.accounts * 
                       slider.employees * 
                       slider.premiumPerEmployee * 
                       slider.participation * 
                       slider.grossCommissions * 
                       slider.persistencyAdjustment;
-  // if(isNaN(slider.commission)) {
-  //   slider.commission = 0;
-  // }
-  // slider.commission = 30;
-  $("#personalCommission").val(slider.commission);
-  console.log(slider.commission);
+
+  commission = displayPrettyAmount(commission);
+
+  $("#personalCommission").val(commission);
+  console.log(commission);
 };
 
