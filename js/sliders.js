@@ -25,6 +25,10 @@ $('#account-input-slider').noUiSlider({
 });
 
 $('#account-input-slider').Link('lower').to($('#number-of-accounts'));
+$('#account-input-slider').on('slide', function(){
+  updateCommission();
+});
+
 
 // EMPLOYEE SLIDER
 $('#employee-input-slider').noUiSlider({
@@ -46,6 +50,9 @@ $('#employee-input-slider').noUiSlider({
 });
 
 $('#employee-input-slider').Link('lower').to($('#number-of-employees'));
+$('#employee-input-slider').on('slide', function(){
+  updateCommission();
+});
 
 // THE MATH!
 var slider = {
@@ -72,7 +79,7 @@ function displayPrettyAmount(amount) {
 
 
 
-var updateCommission = function () {
+var updateCommission = function() {
 
   slider.employees = $('#number-of-employees').val();
   slider.accounts = $('#number-of-accounts').val();
@@ -85,8 +92,6 @@ var updateCommission = function () {
                       slider.persistencyAdjustment;
 
   commission = displayPrettyAmount(commission);
-
-  $("#personalCommission").val(commission);
-  console.log(commission);
+  $("#personalCommission").html(commission);
 };
 

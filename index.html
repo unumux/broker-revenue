@@ -28,22 +28,23 @@
       <section class="interaction">
         <div id="accountsInput" class="input">
           <label for="numberOfAccounts">Accounts</label>
-            <input type="text" id="number-of-accounts">
-          <div id="account-input-slider" class="slider"></div>
+          <input type="text" id="number-of-accounts">
         </div>
+        <div id="account-input-slider" class="slider"></div>
+        
         <div class="math">x</div>
+
         <div id="employeesInput" class="input">
-          <label for="number-of-employees" id="employeesLabel">Employees per account</label>
-            <input type="text" id="number-of-employees">
-          <div id="employee-input-slider" class="slider"></div>
+          <label for="number-of-employees" id="employeesLabel">Employees per</label>
+          <input type="text" id="number-of-employees" onchange="updateCommission()">
         </div>
+        <div id="employee-input-slider" class="slider"></div>
+
         <div class="math">=</div>
-        <div id="commissionsInput" class="input">
-          <label for="personalComission" id="commissionLabel"></label>
-          <input type="text" id="personalCommission" readonly="readonly">
-        </div>
+        
+        <div id="personalCommission">$0</div>
         <div class="action">
-          <p class="note">Click here to find the missing <strong>46%</strong> of your VB Revenue!</p>
+          <p class="note">Potential 1st-Year Voluntary Benefit.</p>
 
           <button class="submit" onclick="updateCommission()">Calculate My Earnings!</button>
         </div>
