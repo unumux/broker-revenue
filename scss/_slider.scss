@@ -1,29 +1,94 @@
-//	Header
-//--------------------------------
+.noUi-horizontal {
+    height: 10px;
+}
 
-.interaction {
-	.input {
-		overflow: hidden;
-		input {
-			display: inline;
-			float: right;
-			width: 20%;
-		}
-	}
-	.action {
-		border-top: 1px solid blue;
-		clear: both;
-	}
-	.math {
+.noUi-target {
+    border: none;
+    border-radius: 0;
+}
 
-		font-family: "Oswald light", helvetica, san-serif;
-		font-size: 36px;
-		font-weight: 300;
-		text-align: center;
-	}
-	.slider {
-		border-bottom: 1px solid grey;
-		clear: both;
-	}
+.noUi-background {
+    background: $pewter;
+}
 
+.noUi-base {
+    background: $steel-blue;
+}
+
+.noUi-origin {
+    background: $platinum;
+    border-radius: 0;
+    border-top: 2px solid lighten($pewter, 25%);
+}
+
+.noUi-handle {
+    border: none;
+    border-bottom: 2px solid lighten($pewter, 25%);
+    border-radius: 0;
+    background: $platinum;
+    -moz-box-shadow:    1px 1px 1px $pewter;
+    -webkit-box-shadow: 1px 1px 1px $pewter;
+    box-shadow:         1px 1px 1px $pewter;
+    
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 25px;
+    height: 20px;
+    
+}
+
+.noUi-handle .noUi-handle-lower {
+
+}
+
+.noUi-handle:before, .noUi-handle:after {
+    height: 100%;
+    top: 0;
+    background: transparent;
+    
+}
+
+.noUi-handle:before {
+    font-size: 12px;
+    font-weight: 900;
+    left: 7px;
+    color: $pewter;
+    letter-spacing: 1px;
+    content: "|||";
+    width: 100%;
+
+}
+
+.noUi-handle:after {
+    left: 14px;
+    display: none
+}
+
+.slider-tooltip {
+    display: block;
+    position: absolute;
+    font: 400 12px/12px Arial;
+    border-radius: 0;
+    background: $slate;
+    color: #fff;
+    top: 25px;
+    padding: 5px;
+    left: -5px;
+    text-align: center;
+    width: 35px;
+    -moz-box-shadow:    2px 2px 2px $pewter;
+    -webkit-box-shadow: 2px 2px 2px $pewter;
+    box-shadow:         2px 2px 2px $pewter;
+}
+
+.tooltip-arrow-up {
+    position: absolute;
+    top: -8px;
+    left: 9px;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid $slate;
 }
