@@ -2,3 +2,4 @@ node_modules/
 components/
 bower_components/
 css/site.css
+!node_modules/uiFramework/tasks/defaults.json
