@@ -25,12 +25,17 @@
     padding: 0;
     li {
         display: block;
+        border-bottom: 1px solid $charcoal;
         &:nth-child(1) {
-            border-bottom: 1px solid $charcoal;
+
         }
     }
 }
 
+
+.panelToggle {
+  display: block;
+}
 .modal-dialog {
     .modal-content {
         overflow: hidden;
@@ -67,21 +72,6 @@
     .tiles {
         > .tile {
             padding: 0;
-            &:nth-child(1) {
-                border-bottom: 1px solid $charcoal;
-                clear: both;
-                width: 100%;
-            }
-            &:nth-child(2n) {
-                clear: left;
-                float: left;
-                width: 50%;
-            }
-            &:nth-child(2n+3) {
-                float: right;
-                width: 50%;
-                clear: right;
-            }
         }
     } 
 }

@@ -5581,9 +5581,11 @@ header {
   list-style: none;
   padding: 0; }
   .tiles li {
-    display: block; }
-    .tiles li:nth-child(1) {
-      border-bottom: 1px solid #1f3340; }
+    display: block;
+    border-bottom: 1px solid #1f3340; }
+
+.panelToggle {
+  display: block; }
 
 .modal-dialog .modal-content {
   overflow: hidden; }
@@ -5609,19 +5611,7 @@ header {
       width: 940px;
       margin: 0 auto; }
   .tiles > .tile {
-    padding: 0; }
-    .tiles > .tile:nth-child(1) {
-      border-bottom: 1px solid #1f3340;
-      clear: both;
-      width: 100%; }
-    .tiles > .tile:nth-child(2n) {
-      clear: left;
-      float: left;
-      width: 50%; }
-    .tiles > .tile:nth-child(2n+3) {
-      float: right;
-      width: 50%;
-      clear: right; } }
+    padding: 0; } }
 
 h1 {
   color: #7f2725; }
