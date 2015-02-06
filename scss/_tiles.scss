@@ -21,31 +21,34 @@
 }
 
 .tiles {
-    list-style: none;
+    list-style: disc;
     padding: 0;
+    ul {
+        padding: 0;
+        margin: 0;
+    }
     li {
         display: block;
         border-bottom: 1px solid $charcoal;
-        &:nth-child(1) {
-
-        }
     }
 }
 
+.tile-content {
+    padding: 2em;
+}
+
+.toggled-content {
+    display: none;
+    &.visible {
+        display: block;
+    }
+    li {
+        border: 0;
+    }
+}
 
 .panelToggle {
   display: block;
-}
-.modal-dialog {
-    .modal-content {
-        overflow: hidden;
-        ul {
-            list-type: none;
-            li {
-                display: block;
-            }
-        }
-    }
 }
 
 .tile {
@@ -55,8 +58,7 @@
     margin: 0;
     overflow: hidden;
     header {
-        min-height: 200px;
-        padding: 1em 1em 0;
+        padding: 1em;
     }
 }
 

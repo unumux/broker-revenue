@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
         <!-- begin:css -->
-            <link rel="stylesheet" type="text/css" href="css/site.css">
-        <!-- end:css -->
+<link rel="stylesheet" type="text/css" href="css/site.css">
+<!-- end:css -->
         <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
     </head>
     <body>
@@ -48,7 +48,6 @@
                      <button class="submit" onclick="updateCommission()">Calculate My Earnings!</button>
                    </div>
                 </section>
-
                <section class="mosaic">
                     <div class="indent">
                         <ul id="accordion" class="tiles">
@@ -76,12 +75,14 @@
                             </li>
                             <li class="tile">
                                 <article>
-                                    <header>
-                                        <h1>Enrollment Solutions</h1>
-                                        <img src="" alt="" />
-                                        <p class="summary">Maximum flexibility with our Harmony® enrollment system (1-to-1, group meetings, call center, co-browse and self-enroll)</p>
+                                    <header class="tile-heading">
+                                        <a class="panelToggle" href="#">
+                                            <h1 class="panel-title">Enrollment Solutions</h1>
+                                            <img src="" alt="" />
+                                            <p class="summary">Maximum flexibility with our Harmony® enrollment system (1-to-1, group meetings, call center, co-browse and self-enroll)</p>
+                                        </a>
                                     </header>
-                                    <section>
+                                    <section class="tile-content toggled-content">
                                         <div>
                                             <ul>
                                                 <li> Core and/or voluntary</li>
@@ -97,14 +98,14 @@
 
                             <li class="tile">
                                 <article>
-                                    <header data-toggle="modal" data-target="#productSolutions">
+                                    <header>
                                          <h1>Product Solutions</h1>
                                          <img src="" alt="" />
                                          <p>Group and individual voluntary benefits, underwriting offers and support tools are designed to help meet your clients’ unique needs.</p>
                                     </header>
-                                     <section id="productSolutions" class="modal fade" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <ul class="modal-content">
+                                     <section>
+                                        <div>
+                                            <ul>
                                                 <li>Group and individual voluntary benefits: short-term disability, accident, cancer, critical illness, hospital confinement indemnity and life (term, whole and universal)</li>
                                                 <li>Flexible underwriting offers simplify the process of adding voluntary benefits and make it easy as possible for employees to qualify for coverage</li>
                                                 <li>Field-enabled block management tools support proposal development, rework strategies and more</li>
@@ -115,14 +116,14 @@
                             </li>
                             <li class="tile">
                                 <article>
-                                     <header  data-toggle="modal" data-target="#broker-solutions">
+                                     <header>
                                         <h1>Broker Service Solutions</h1>
                                         <img src="" alt=""/>
                                         <p>Our sales and support tools can help you succeed in the voluntary benefits industry.</p>
                                      </header>
-                                     <section id="broker-solutions" class="modal fade" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                         <div class="modal-dialog">
-                                             <ul class="modal-content">
+                                     <section>
+                                         <div>
+                                             <ul>
                                                  <li>My Colonial Life for Brokers, our secure, brokers-only intranet, gives you all the work essentials you need to conduct business quickly and easily.</li>
                                                  <li>My Colonial Life for Brokers, our secure, brokers-only intranet, gives you all the work essentials you need to conduct business quickly and easily.</li>
                                                  <li>Each account has a dedicated service team.</li>
@@ -136,14 +137,14 @@
                              </li>
                              <li class="tile">
                                 <article>
-                                    <header data-toggle="modal" data-target="#clientSolutions">
+                                    <header>
                                         <h1>Client Solutions</h1>
                                         <img src="" alt=""/>
                                         <p>Our proven suite of benefit services helps your clients overcome their top benefit challenges.</p>
                                     </header>
-                                     <section id="clientSolutions" class="modal fade" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                         <div class="modal-dialog">
-                                             <ul class="modal-content">
+                                     <section>
+                                         <div>
+                                             <ul>
                                                  <li>Benefits administration services</li>
                                                  <li>Communication and education solutions</li>
                                                  <li>Cost-management strategies</li>
@@ -162,10 +163,14 @@
         <footer>
 
         </footer>
-
-
-  <!-- begin:js -->
-
+        <!-- begin:js -->
+<script src="//localhost:35729/livereload.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/boostrap/modal.js"></script>
+<script src="js/jquery.nouislider.js"></script>
+<script src="js/nouislider.liblink.js"></script>
+<script src="js/script-brokerRevenue.js"></script>
+<script src="js/sliders.js"></script>
 <!-- end:js -->
 
 </body>
