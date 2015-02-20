@@ -83,6 +83,7 @@ var updateCommission = function() {
 
   slider.employees = $('#number-of-employees').val();
   slider.accounts = $('#number-of-accounts').val();
+  console.log($('#number-of-accounts'))
   
   var commission = slider.accounts * 
                       slider.employees * 
@@ -90,7 +91,7 @@ var updateCommission = function() {
                       slider.participation * 
                       slider.grossCommissions * 
                       slider.persistencyAdjustment;
-
+  console.log(slider);
   commission = displayPrettyAmount(commission);
   $("#personalCommission").html(commission);
 };
