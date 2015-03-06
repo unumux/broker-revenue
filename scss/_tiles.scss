@@ -24,31 +24,20 @@
     list-style: disc;
     padding: 0;
     ul {
-        padding: 0;
+        padding: 1em;
         margin: 0;
     }
     li {
         display: block;
-        border-bottom: 1px solid $charcoal;
+
     }
+}
+
+.tile-heading {
+    cursor: pointer;
 }
 
 .tile-content {
-    padding: 2em;
-}
-
-.toggled-content {
-    display: none;
-    &.visible {
-        display: block;
-    }
-    li {
-        border: 0;
-    }
-}
-
-.panelToggle {
-  display: block;
 }
 
 .tile {
@@ -64,7 +53,7 @@
 
 @media screen and (min-width: 1024px) {
     .mosaic {
-        background-color: $tangerine;
+        background-color: lighten($sand, 5%);
         .indent {
             width: 940px;
             margin: 0 auto;           
