@@ -5,5 +5,8 @@
     "colonial-branding": "unumux/colonial-branding",
     "nouislider": "~7.0.9"
   },
-  "overrides": {}
+  "overrides": {},
+  "devDependencies": {
+    "nouislider": "~7.0.9"
+  }
 }
