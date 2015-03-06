@@ -215,12 +215,11 @@
                     <h3>Let's Talk Numbers... Yours!</h3>
                 </div>
 
-                <div class="col-md-4 form-toggle" data-toggle="modal" data-target="#form-modal">
+                <div class="col-md-4 form-toggle" data-toggle="collapse" data-target="#contactForm">
                     <h4>Complete Online Form</h4>
                 </div>
-                <div id="form-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <form id="contact-form" class="modal-content">
+                <div>
+                    <form id="contactForm" class="collapse">
                         <h3>Contact Colonial Life</h3>
                         <p>Fill out our form and we will call you!</p>
 
@@ -251,7 +250,6 @@
                         <button class="btn btn-steel-blue">Send</button>
                     </form>
                   </div>
-                </div>
             </section>
             
         </main>
@@ -269,8 +267,10 @@
         <!-- begin:js -->
 <script src="//localhost:35729/livereload.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="js/bootstrap/collapse.js"></script>
 <script src="js/bootstrap/modal.js"></script>
 <script src="js/jquery.nouislider.js"></script>
+<script src="js/modernizr/modernizr.2.7.1.min.js"></script>
 <script src="js/script-brokerRevenue.js"></script>
 <!-- end:js -->
 
