@@ -1,5 +1,5 @@
 .interaction {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -27,4 +27,29 @@
 #personalCommission {
   font-size: 50px;
   text-align: center;
+}
+
+.step {
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 9%;
+  background-color: #26526E; 
+}
+
+.step-down {
+  float: left;
+  border-left: none;
+  border-radius: 0 3px 3px 0;
+}
+
+.step-up {
+  float: right;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
+
+#account-input-slider {
+  width: 80%;
+  margin: 20px 1% 0 1%;
+  float: left;
 }
