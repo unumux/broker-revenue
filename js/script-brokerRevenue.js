@@ -1,13 +1,13 @@
 $(document).ready(function () {
-	$(".panelToggle").click( function (e) {
-		e.preventDefault();
-		$(".toggled-content").each( function () {
-			$(this).removeClass("visible");
-		});
-		$(this).parent(".tile-heading").next(".tile-content").addClass("visible");
+	$(".element-toggle", ".form-toggle").click(function () {
+		if($(this).next().hasClass("in")) {
+			$(this).next().collapse("toggle");
+		} else {
+			$(".collapse").collapse("hide");
+			$(this).next().collapse("show");
+		}
 	});
 
-});
 
 	// $("#sliderAccount").noUiSlider({
 	// 	start: [ 20000 ],
@@ -44,15 +44,5 @@ $(document).ready(function () {
 
 	//$("#sliderAccount").Link("lower").to($("#numberOfAccounts"));
 
-	$('.element-toggle, .form-toggle').click(function(){
-		if($(this).next().hasClass('in')) {
-			$(this).next().collapse('toggle');
-		}
-		else {
-			$('.collapse').collapse('hide');
-			$(this).next().collapse('show');
-		}
-	});
-});
-
+	
 });
