@@ -1,55 +1,86 @@
-.interaction {
-  width: 100%;
-  margin: 0 auto;
+.action {
+    text-align: center;
+    .action__submit {
+        @include transition(background-color, .2s, linear);
+        background-color: $leaf;
+        border: {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 2px solid darken($leaf, 10%);
+        }
+        border-radius: 3px;
+        padding: .5em 3em;
+        text-transform: uppercase;
+        &:hover {
+            @include transition(background-color, .2s, linear);
+            background-color: lighten($leaf, 10%);
+        }
+    }
+}
+
+.result {
+    .result__title {
+        font-family: 'Oswald Light', Arial, sans-serif;
+        font-size: 50px;
+    }
+    .result__summary {
+        text-align: center;
+        margin-bottom: 2em;
+    }
 }
 
 #accountsInput, 
 #employeesInput,
 #comissionsInput {
-  label {
-    width: 75%;
-    float: left;
-    margin-top: 6px;
-  }
-  input {
-    width: 25%;
-    float: left;
-  }
-  @extend .clearfix;
-
-}
-
-.test {
   @extend .clearfix;
 }
 
 .math, 
 #personalCommission {
+  font-family: 'Oswald Light', Arial, sans-serif;
   font-size: 50px;
   text-align: center;
 }
 
 .step {
-  border: 1px solid #fff;
-  padding: 10px;
-  width: 9%;
-  background-color: #26526E; 
+    background-color: darken($steel-blue, 10%); 
+    border: 1px solid #fff;
+    font-size: 1.5em;
+    padding: 5px;
+    text-align: center;
+    width: 12%;
 }
 
-.step-down {
+.step__down {
   float: left;
   border-left: none;
   border-radius: 0 3px 3px 0;
 }
 
-.step-up {
+.step__up {
   float: right;
   border-right: none;
   border-radius: 3px 0 0 3px;
 }
 
-#account-input-slider {
-  width: 80%;
-  margin: 20px 1% 0 1%;
+#account-input-slider,
+#employee-input-slider {
+  width: 66%;
+  margin: 20px 5% 0 5%;
   float: left;
 }
+
+
+@media all and (min-width: 1024px) {
+    #account-input-slider,
+    #employee-input-slider {
+        width: 90%;
+        margin: 20px 5% 0 5%;
+        float: left;
+    }
+    .step {
+        display: none;
+    }
+}
+

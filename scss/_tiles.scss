@@ -4,41 +4,31 @@
     .indent {
         width: 100%;  
     }
-    h1 {
-        color: $steel-blue;
-        font-size: 26px;
-    }
+
     article {
+        @include transition(background-color, .3s, linear);
         background-color: lighten($slate, 10%);
         padding: 0;
         &:hover {
+            @include transition(background-color, .3s, linear);
             background-color: lighten($slate, 20%);
         }
-        h1 {
-           margin: 0;
+    }
+    .mosaic__tiles {
+        list-style: disc;
+        padding: 0;
+        ul {
+            padding: 1em;
+            margin: 0;
+        }
+        li {
+            display: block;
+
         }
     }
 }
 
-.tiles {
-    list-style: disc;
-    padding: 0;
-    ul {
-        padding: 1em;
-        margin: 0;
-    }
-    li {
-        display: block;
 
-    }
-}
-
-.tile-heading {
-    cursor: pointer;
-}
-
-.tile-content {
-}
 
 .tile {
     list-style: none;
@@ -51,11 +41,23 @@
     }
 }
 
+    .tile__heading {
+        cursor: pointer;
+        .tile__heading__title {
+            color: $steel-blue;
+            font-size: 26px;
+            margin: 0;
+        }
+    }
+
+    .tile__content {
+    }
+
+
 @media screen and (min-width: 1024px) {
     .mosaic {
-        background-color: lighten($sand, 5%);
         .indent {
-            width: 940px;
+            width: 80%;
             margin: 0 auto;           
         }
     }

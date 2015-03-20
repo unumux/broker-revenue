@@ -1,6 +1,8 @@
 body {
 	background-color: $steel-blue;
 	color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -15,13 +17,17 @@ a {
   }
 
   img {
-  	max-width:100%;
+  	max-width: 100%;
   }
 
 .logo {
 	width: 50px;
 }
 
-main {
-	padding: 10px;
+
+
+.article {
+    .article__title {
+        text-align: center;
+    }
 }

@@ -10,3 +10,15 @@
 		color:#fff;
 	}
 }
+
+.interaction {
+	.interaction__section {
+	    width: 25%;
+	    float: left;
+	}
+	.interaction__label {
+	    width: 75%;
+	    float: left;
+	    margin-top: 6px;
+	}
+}
