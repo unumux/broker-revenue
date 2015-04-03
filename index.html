@@ -13,7 +13,6 @@
 </head>
 <body>
     <header class="header__primary">
-
         <div class="indent">
             <a class="header__primary__logo" href="http://coloniallife.com/">
                 <img src="img/logo-one-color.svg" alt="Colonial Life">
@@ -30,19 +29,6 @@
                 </p>
             </header>
 
-      <section class="interaction">
-        <div id="accountsInput" class="input">
-                        <label for="number-of-accounts" id="accountsLabel">Accounts</label>
-                        <input type="text" id="number-of-accounts" value="12" pattern="[0-9]*">
-                        
-                        <div id="accountSlider" class="slider account">
-                           <div id="sliderAccount"></div>
-                           <div id="slider-range-value"></div>
-                        </div>
-        </div>
-        <div id="account-input-slider" class="slider"></div>
-        
-        <div class="math">x</div>
             <section class="article__content">
                 <div class="interaction">
                     <div id="accountsInput">
@@ -55,13 +41,14 @@
                            <div id="slider-range-value"></div>
                         </div>  
                     </div>
+
                     
                     <div class="step step__down">-</div>
                     <div id="account-input-slider" class="slider"></div>
                     <div class="step step__up">+</div> 
                     <div class="math">x</div>
                     
-                    <div id="employeesInput">
+                     <div id="employeesInput">
                         <label for="numberOfEmployees" class="interaction__label" id="employeesLabel">Number of Employees per Account</label>
                         <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
                         <input type="text" class="interaction__input" id="numberOfEmployees" onchange="updateCommission()">
@@ -79,8 +66,7 @@
                         </div>
                         <p class="result__summary">Potential 1st-Year Voluntary Benefit.</p>
                     </div>
-                    
-                    <div class="indent action">
+                     <div class="indent action">
                        <a id="calcBtn" href="broker-calculator.html" class="action__submit submit">Calculate My Earnings!</a> 
                     </div>
                 </div>
@@ -220,7 +206,6 @@
 
                             <label>Comment</label>
                             <textarea></textarea>
-
 
                             <button class="btn btn-steel-blue">Send</button>
                         </section>
