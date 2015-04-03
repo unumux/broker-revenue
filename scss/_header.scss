@@ -1,7 +1,14 @@
 //	Header
 //--------------------------------
 
-header {
+.header-primary {
 	overflow: hidden;
 	padding-top: 30px;
 }
+
+	.header__primary__logo {
+		float: left;
+	}
+	.header__primary__title {
+		float: right;
+	}
