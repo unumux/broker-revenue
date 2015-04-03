@@ -31,3 +31,14 @@ header {
 		text-align: center;
 	}
 }
+
+.indent {
+	margin: 0 5%;
+}
+
+@media all and (min-width: 1024px) {
+	.indent {
+		margin: 0 auto;
+		width: 90%;
+	}
+}
