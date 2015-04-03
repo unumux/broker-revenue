@@ -1,150 +1,158 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Broker Revenue 2.0</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
-  <!-- begin:css -->
-<link rel="stylesheet" type="text/css" href="css/site.css">
-<!-- end:css -->
-  <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Broker Revenue 2.0</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <!-- begin:css -->
+        <link rel="stylesheet" type="text/css" href="css/site.css">
+    <!-- end:css -->
+    <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
 </head>
 <body>
-  <header class="primary">
-    <a class="logo" href="http://coloniallife.com/"><img src="img/logo-colonial-life.png" alt="Colonial Life"></a>
-  </header>
-  <main>
-    <article>
-      <h1>Multiply Your Revenue!</h1>
-      <p>
-        See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment.See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment<sup>1</sup>. 
-      </p>
-      <section class="interaction">
-        <div id="accountsInput" class="input">
-            <label for="number-of-accounts" id="accountsLabel">Accounts</label>
-            <input type="text" id="number-of-accounts" value="12" pattern="[0-9]*">
-            
-            
-            <div id="accountSlider" class="slider account">
-               <div id="sliderAccount"></div>
-               <div id="slider-range-value"></div>
-            </div>
-            
+    <header class="header-primary">
+        <div class="indent">
+            <a class="header__primary__logo" href="http://coloniallife.com/"><img src="img/logo-one-color.svg" alt="Colonial Life"></a>
+            <h1 class="header__primary__title">Broker Revenue</h1>
         </div>
-        <div class="step step-down">-</div>
-            <div id="account-input-slider" class="slider"></div>
-        <div class="step step-up">+</div>
-        
-        <div class="math">x</div>
+    </header>
+    <main>
+        <article class="article">
+            <header class="indent article__heading">
+                <h1 class="article__title">Multiply Your Revenue!</h1>
+                <p class="article__summary">
+                  See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment.See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment<sup>1</sup>. 
+                </p>
+            </header>
 
-        <div id="employeesInput" class="input">
-          <label for="number-of-employees" id="employeesLabel">Employees per</label>
-          <input type="text" id="number-of-employees" onchange="updateCommission()">
-                        <div id="employeesSlider" class="slider employee">
+            <section class="article__content">
+                <div class="interaction">
+                    <div id="accountsInput">
+                        <label for="number-of-accounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
+                        <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
+                        <input type="text" class="indent interaction__input" id="number-of-accounts" value="12" pattern="[0-9]*">
+                        <div id="accountSlider" class="interaction__slider slider account">
+                           <div id="sliderAccount"></div>
+                           <div id="slider-range-value"></div>
+                        </div>  
+                    </div>
+                    
+                    <div class="step step__down">-</div>
+                    <div id="account-input-slider" class="slider"></div>
+                    <div class="step step__up">+</div> 
+                    <div class="math">x</div>
+                    
+                    <div id="employeesInput">
+                        <label for="number-of-employees" class="interaction__label" id="employeesLabel">Number of Employees per Account</label>
+                        <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
+                        <input type="text" class="interaction__input" id="number-of-employees" onchange="updateCommission()">
+                        <div id="employeesSlider" class="interaction__slider slider employee"></div>
+                    </div>
+                    
+                    <div class="step step__down">-</div>
+                    <div id="employee-input-slider" class="slider"></div>
+                    <div class="step step__up">+</div> 
+                    <div class="math">=</div>
+                    
+                    <div class="result">
+                        <div id="personalCommission">
+                            <h1 class="result__title">$0</h1>
                         </div>
-        </div>
-        <div id="employee-input-slider" class="slider"></div>
-
-        <div class="math">=</div>
-        
-        <div id="personalCommission">$0</div>
-        <div class="action">
-          <p class="note">Potential 1st-Year Voluntary Benefit.</p>
-          <button class="submit" onclick="updateCommission()">Calculate My Earnings!</button>
-        </div>
-        </section>
-                <section class="mosaic">
-                    <div class="indent">
-                        <ul id="accordion" class="tiles">
-                            <li class="tile">                                
-                                <article>
-                                    <header class="tile-heading element-toggle" data-target="#OneToOneCounseling">
-                                        <h1 class="panel-title">1-to-1 Benefit Counseling Heading</h1> 
-                                        <img src="" alt="" />
-                                        <p class="summary">Our national network of local benefit counselors can help transform your clients’ enrollment experiences.</p>
-                                    </header>
-                                    <section id="OneToOneCounseling" class="tile-content collapse">
-                                        <div >
-                                            <ul>
-                                                <li>Our preferred 1-to-1 benefit counseling method helps increase employee understanding and appreciation of benefits and can help increase total enrollment participation.</li> 
-                                                <li>We have more than than 8,000 locally-based benefit representatives and a National Enrollment Team of 1,300+ members who are hand-selected and trained to serve our large, multi-state accounts.</li>
-                                                <li>Our benefit counselors listen and propose needs-based product solutions.</li>
-                                                <li>They’re measured against business quality standards and can be graded by employees after every enrollment.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </section>
-                                </article>
-                            </li>
-                            <li class="tile">
-                                <article>
-                                    <header class="tile-heading element-toggle" data-target="#EnrollmentSolutions">
-                                        <h1 class="panel-title">Enrollment Solutions</h1>
-                                        <img src="" alt="" />
-                                        <p class="summary">Maximum flexibility with our Harmony® enrollment system (1-to-1, group meetings, call center, co-browse and self-enroll)</p>
-                                    </header>
-                                    <section id="EnrollmentSolutions" class="tile-content collapse">
-                                        <div>
-                                            <ul>
-                                                <li> Core and/or voluntary</li>
-                                                <li>Support for all case sizes (3+ lives)</li>
-                                                <li>Single and multi-site/multi-state</li>
-                                                <li>National network of local benefit counselors</li>
-                                                <li>Flexible options, including Auto Enroll, Census Enroll and Express Enroll; plug-in or  product hosting arrangements through benefits administration system partnerships; and private exchanges through strategic partnerships</li>
-                                            </ul>
-                                        </div>
-                                    </section>
-                                 </article>
-                             </li> 
-
-                            <li class="tile">
-                                <article>
-                                    <header class="tile-heading element-toggle" data-target="#ProductSolutions">
-                                             <h1>Product Solutions</h1>
-                                             <img src="" alt="" />
-                                             <p>Group and individual voluntary benefits, underwriting offers and support tools are designed to help meet your clients’ unique needs.</p>
-                                    </header>
-                                    <section id="ProductSolutions" class="tile-content collapse">
-                                        <div>
-                                            <ul>
-                                                <li>Group and individual voluntary benefits: short-term disability, accident, cancer, critical illness, hospital confinement indemnity and life (term, whole and universal)</li>
-                                                <li>Flexible underwriting offers simplify the process of adding voluntary benefits and make it easy as possible for employees to qualify for coverage</li>
-                                                <li>Field-enabled block management tools support proposal development, rework strategies and more</li>
-                                            </ul>
-                                        </div>
-                                     </section>
-                                 </article>
-                            </li>
-                            <li class="tile">
-                                <article>
-                                     <header class="tile-heading element-toggle" data-target="#BrokerSolutions">
-                                        <h1>Broker Service Solutions</h1>
-                                        <img src="" alt=""/>
-                                        <p>Our sales and support tools can help you succeed in the voluntary benefits industry.</p>
-                                     </header>
-                                     <section id="BrokerSolutions" class="tile-content collapse">
-                                         <div>
-                                             <ul>
-                                                 <li>My Colonial Life for Brokers, our secure, brokers-only intranet, gives you all the work essentials you need to conduct business quickly and easily.</li>
-                                                 <li>My Colonial Life for Brokers, our secure, brokers-only intranet, gives you all the work essentials you need to conduct business quickly and easily.</li>
-                                                 <li>Each account has a dedicated service team.</li>
-                                                 <li>We provide flexible data services, including customized data file formats.</li>
-                                                 <li>We offer continuing education, including lunch and learns, broker forums, webinars and CE credit classes to our broker partners.</li>
-                                             </ul>
-                                         </div>
-                                     </section>
-                                     
-                                 </article>
-                             </li>
-                             <li class="tile">
-                                <article>
-                                    <header class="tile-heading element-toggle" data-target="#ClientSolutions">
-                                        <h1>Client Solutions</h1>
-                                        <img src="" alt=""/>
-                                        <p>Our proven suite of benefit services helps your clients overcome their top 
-                                    </header>
+                        <p class="result__summary">Potential 1st-Year Voluntary Benefit.</p>
+                    </div>
+                    <div class="indent action">
+                        <button class="action__submit submit" onclick="updateCommission()">Calculate My Earnings!</button>
+                    </div>
+                </div>
+                <div class="indent mosaic">
+                    <ul id="accordion" class="mosaic__tiles">
+                        <li class="tile">                                
+                            <article>
+                                <header class="tile__heading element-toggle" data-target="#OneToOneCounseling">
+                                    <h1 class="tile__heading__title panel-title">1-to-1 Benefit Counseling Heading</h1> 
+                                    <img src="" alt="" />
+                                    <p class="tile__heading__summary">Our national network of local benefit counselors can help transform your clients’ enrollment experiences.</p>
+                                </header>
+                                <section id="OneToOneCounseling" class="tile__content collapse">
+                                    <div >
+                                        <ul>
+                                            <li>Our preferred 1-to-1 benefit counseling method helps increase employee understanding and appreciation of benefits and can help increase total enrollment participation.</li> 
+                                            <li>We have more than than 8,000 locally-based benefit representatives and a National Enrollment Team of 1,300+ members who are hand-selected and trained to serve our large, multi-state accounts.</li>
+                                            <li>Our benefit counselors listen and propose needs-based product solutions.</li>
+                                            <li>They’re measured against business quality standards and can be graded by employees after every enrollment.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </article>
+                        </li>
+                        <li class="tile">
+                            <article>
+                                <header class="tile-heading element-toggle" data-target="#EnrollmentSolutions">
+                                    <h1 class="panel-title">Enrollment Solutions</h1>
+                                    <img src="" alt="" />
+                                    <p class="summary">Maximum flexibility with our Harmony® enrollment system (1-to-1, group meetings, call center, co-browse and self-enroll)</p>
+                                </header>
+                                <section id="EnrollmentSolutions" class="tile-content collapse">
+                                    <div>
+                                        <ul>
+                                            <li> Core and/or voluntary</li>
+                                            <li>Support for all case sizes (3+ lives)</li>
+                                            <li>Single and multi-site/multi-state</li>
+                                            <li>National network of local benefit counselors</li>
+                                            <li>Flexible options, including Auto Enroll, Census Enroll and Express Enroll; plug-in or  product hosting arrangements through benefits administration system partnerships; and private exchanges through strategic partnerships</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                             </article>
+                        </li> 
+                        <li class="tile">
+                            <article>
+                                <header class="tile-heading element-toggle" data-target="#ProductSolutions">
+                                    <h1>Product Solutions</h1>
+                                    <img src="" alt="" />
+                                    <p>Group and individual voluntary benefits, underwriting offers and support tools are designed to help meet your clients’ unique needs.</p>
+                                </header>
+                                <section id="ProductSolutions" class="tile-content collapse">
+                                    <div>
+                                        <ul>
+                                            <li>Group and individual voluntary benefits: short-term disability, accident, cancer, critical illness, hospital confinement indemnity and life (term, whole and universal)</li>
+                                            <li>Flexible underwriting offers simplify the process of adding voluntary benefits and make it easy as possible for employees to qualify for coverage</li>
+                                            <li>Field-enabled block management tools support proposal development, rework strategies and more</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </article>
+                        </li>
+                        <li class="tile">
+                            <article>
+                                 <header class="tile-heading element-toggle" data-target="#BrokerSolutions">
+                                      <h1>Broker Service Solutions</h1>
+                                      <img src="" alt=""/>
+                                      <p>Our sales and support tools can help you succeed in the voluntary benefits industry.</p>
+                                 </header>
+                                 <section id="BrokerSolutions" class="tile-content collapse">
+                                     <div>
+                                         <ul>
+                                             <li>My Colonial Life for Brokers, our secure, brokers-only intranet, gives you all the work essentials you need to conduct business quickly and easily.</li>
+                                             <li>My Colonial Life for Brokers, our secure, brokers-only intranet, gives you all the work essentials you need to conduct business quickly and easily.</li>
+                                             <li>Each account has a dedicated service team.</li>
+                                             <li>We provide flexible data services, including customized data file formats.</li>
+                                             <li>We offer continuing education, including lunch and learns, broker forums, webinars and CE credit classes to our broker partners.</li>
+                                         </ul>
+                                     </div>
+                                 </section>
+                            </article>
+                                </li>
+                                <li class="tile">
+                                    <article>
+                                        <header class="tile-heading element-toggle" data-target="#ClientSolutions">
+                                            <h1>Client Solutions</h1>
+                                            <img src="" alt=""/>
+                                            <p>Our proven suite of benefit services helps your clients overcome their top 
+                                        </header>
                                         <section id="ClientSolutions" class="tile-content collapse">
                                              <div>
                                                  <ul>
@@ -155,65 +163,68 @@
                                                      <li>Specialized market expertise in small business, public sector and large case</li>
                                                  </ul>
                                              </div>
-                                     </section>
-                                </article>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </article>
-        </main>
-<footer>
-    <div class="indent">
-        <form id="form">
-            <h3>Let's Talk Numbers</h3>
-            <p>Fill out our form and we will call you!</p>
+                                        </section>
+                                    </article>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </article>
+            </main>
+            <footer class="footer-primary">
+                <div class="indent">
+                    <form id="form" class="footer-primary-form">
+                        <header class="footer-primary-header form-toggle" data-target="#ContactForm">
+                            <h3>Let's Talk Numbers</h3>
+                            <p>Fill out our form and we will call you!</p>
+                        </header>
+                        <section id="ContactForm" class="footer-primary-content collapse">
+                            <label>First Name*</label>
+                            <input type="text" id="firstName"/>
 
-            <label>First Name*</label>
-            <input type="text" id="firstName"/>
+                            <label>Last Name*</label>
+                            <input type="text" id="lastName"/>
 
-            <label>Last Name*</label>
-            <input type="text" id="lastName"/>
+                            <label>Email*</label>
+                            <input type="email" id="email" placeholder="someone@mail.com"/>
 
-            <label>Email*</label>
-            <input type="email" id="email" placeholder="someone@mail.com"/>
+                            <label>Phone*</label>
+                            <input type="tel" id="phone" placeholder="555-555-5555"/>
 
-            <label>Phone*</label>
-            <input type="tel" id="phone" placeholder="555-555-5555"/>
+                            <label>Zip Code*</label>
+                            <input type="number" id="zipCode"/>
 
-            <label>Zip Code*</label>
-            <input type="number" id="zipCode"/>
+                            <label>Number of Clients*</label>
+                            <input type="number" id="clientNumber"/>
 
-            <label>Number of Clients*</label>
-            <input type="number" id="clientNumber"/>
+                            <label>Average Client Size*</label>
+                            <input type="number" id="clientAverage"/>
 
-            <label>Average Client Size*</label>
-            <input type="number" id="clientAverage"/>
+                            <label>Comment</label>
+                            <textarea></textarea>
 
-            <label>Comment</label>
-            <textarea></textarea>
-
-            <button class="btn btn-steel-blue">Send</button>
-        </form>
-        <section class="copyright">
-            <p>© 2011 Colonial Life & Accident Insurance Company</p>
-            <p>Colonial Life products are underwritten by Colonial Life & Accident Insurance Company. Coverage may vary by state and may not be available in all states. Colonial Life is the marketing brand of Colonial Life & Accident Insurance Company.</p>
-            <p>In New York, similar products and services, if approved, are underwritten by a Colonial Life affiliate, The Paul Revere Life Insurance Company.</p>
-        </section>
-    </div>
-</footer>
-  <!-- begin:js -->
-<script src="//localhost:35729/livereload.js"></script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="js/bootstrap/collapse.js"></script>
-<script src="js/bootstrap/modal.js"></script>
-<script src="js/bootstrap/transition.js"></script>
-<script src="js/jquery.nouislider.js"></script>
-<script src="js/modernizr/modernizr.2.7.1.min.js"></script>
-<script src="js/nouislider.liblink.js"></script>
-<script src="js/script-brokerRevenue.js"></script>
-<script src="js/sliders.js"></script>
-<!-- end:js -->
+                            <button class="btn btn-steel-blue">Send</button>
+                        </section>
+                    </form>
+                    <footer class="footer-primary-footer copyright">
+                        <p>© 2011 Colonial Life & Accident Insurance Company</p>
+                        <p>Colonial Life products are underwritten by Colonial Life & Accident Insurance Company. Coverage may vary by state and may not be available in all states. Colonial Life is the marketing brand of Colonial Life & Accident Insurance Company.</p>
+                        <p>In New York, similar products and services, if approved, are underwritten by a Colonial Life affiliate, The Paul Revere Life Insurance Company.</p>
+                    </footer>
+                </div>
+          </footer>
+      <!-- begin:js -->
+          <script src="//localhost:35729/livereload.js"></script>
+          <script src="bower_components/jquery/dist/jquery.min.js"></script>
+          <script src="js/bootstrap/collapse.js"></script>
+          <script src="js/bootstrap/modal.js"></script>
+          <script src="js/bootstrap/transition.js"></script>
+          <script src="js/jquery.nouislider.js"></script>
+          <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
+          <script src="js/nouislider.liblink.js"></script>
+          <script src="js/script-brokerRevenue.js"></script>
+          <script src="js/sliders.js"></script>
+      <!-- end:js -->
 
 </body>
 </html>

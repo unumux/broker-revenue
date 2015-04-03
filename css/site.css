@@ -4621,10 +4621,10 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, #accountsInput:before, #employeesInput:before, #comissionsInput:before, .test:before, .clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after, .test:after {
+.clearfix:before, #accountsInput:before, #employeesInput:before, #comissionsInput:before, .clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after {
   content: " ";
   display: table; }
-.clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after, .test:after {
+.clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after {
   clear: both; }
 
 .center-block {
@@ -9459,10 +9459,10 @@ button.close {
   .carousel-indicators {
     bottom: 20px; } }
 
-.clearfix:before, #accountsInput:before, #employeesInput:before, #comissionsInput:before, .test:before, .clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after, .test:after {
+.clearfix:before, #accountsInput:before, #employeesInput:before, #comissionsInput:before, .clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after {
   content: " ";
   display: table; }
-.clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after, .test:after {
+.clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after {
   clear: both; }
 
 .center-block {
@@ -10516,7 +10516,9 @@ thead {
 
 body {
   background-color: #265b80;
-  color: #fff; }
+  color: #fff;
+  padding: 0;
+  margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   color: #fff; }
@@ -10530,13 +10532,11 @@ img {
 .logo {
   width: 50px; }
 
-main {
-  padding: 10px; }
+.article .article__title {
+  text-align: center; }
 
-footer {
-  padding: 1em; }
-  footer .copyright {
-    font-size: 12px; }
+footer .copyright {
+  font-size: 12px; }
 
 .form-toggle {
   -webkit-align-content: center;
@@ -10552,51 +10552,87 @@ footer {
   .form-toggle h4 {
     color: #fff; }
 
-header {
+.interaction .interaction__section {
+  width: 25%;
+  float: left; }
+.interaction .interaction__label {
+  width: 75%;
+  float: left;
+  margin-top: 6px; }
+
+.header-primary {
   overflow: hidden;
   padding-top: 30px; }
 
-.clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after, .test:after {
+.header__primary__logo {
+  float: left; }
+
+.header__primary__title {
+  float: right; }
+
+.clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after {
   content: '';
   display: table;
   clear: both; }
 
-.interaction {
-  width: 100%;
-  margin: 0 auto; }
+.action {
+  text-align: center; }
+  .action .action__submit {
+    transition: background-color 0.2s linear;
+    background-color: #67a14c;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #527e3c;
+    border-radius: 3px;
+    padding: 0.5em 3em;
+    text-transform: uppercase; }
+    .action .action__submit:hover {
+      transition: background-color 0.2s linear;
+      background-color: #83b868; }
 
-#accountsInput label, #employeesInput label, #comissionsInput label {
-  width: 75%;
-  float: left;
-  margin-top: 6px; }
-#accountsInput input, #employeesInput input, #comissionsInput input {
-  width: 25%;
-  float: left; }
+.result .result__title {
+  font-family: 'Oswald Light', Arial, sans-serif;
+  font-size: 50px; }
+.result .result__summary {
+  text-align: center;
+  margin-bottom: 2em; }
 
 .math, #personalCommission {
+  font-family: 'Oswald Light', Arial, sans-serif;
   font-size: 50px;
   text-align: center; }
 
 .step {
+  background-color: #1a4059;
   border: 1px solid #fff;
-  padding: 10px;
-  width: 9%;
-  background-color: #26526E; }
+  font-size: 1.5em;
+  padding: 5px;
+  text-align: center;
+  width: 12%; }
 
-.step-down {
+.step__down {
   float: left;
   border-left: none;
   border-radius: 0 3px 3px 0; }
 
-.step-up {
+.step__up {
   float: right;
   border-right: none;
   border-radius: 3px 0 0 3px; }
 
-#account-input-slider {
-  width: 80%;
-  margin: 20px 1% 0 1%;
+#account-input-slider, #employee-input-slider {
+  width: 66%;
+  margin: 20px 5% 0 5%;
   float: left; }
+
+@media all and (min-width: 1024px) {
+  #account-input-slider, #employee-input-slider {
+    width: 90%;
+    margin: 20px 5% 0 5%;
+    float: left; }
+  .step {
+    display: none; } }
 
 /* Functional styling;
  * These styles are required for noUiSlider to function.
@@ -10820,28 +10856,21 @@ header {
   padding: 1em 0; }
   .mosaic .indent {
     width: 100%; }
-  .mosaic h1 {
-    color: #265b80;
-    font-size: 26px; }
   .mosaic article {
+    transition: background-color 0.3s linear;
     background-color: #738b9e;
     padding: 0; }
     .mosaic article:hover {
+      transition: background-color 0.3s linear;
       background-color: #91a4b3; }
-    .mosaic article h1 {
+  .mosaic .mosaic__tiles {
+    list-style: disc;
+    padding: 0; }
+    .mosaic .mosaic__tiles ul {
+      padding: 1em;
       margin: 0; }
-
-.tiles {
-  list-style: disc;
-  padding: 0; }
-  .tiles ul {
-    padding: 1em;
-    margin: 0; }
-  .tiles li {
-    display: block; }
-
-.tile-heading {
-  cursor: pointer; }
+    .mosaic .mosaic__tiles li {
+      display: block; }
 
 .tile {
   list-style: none;
@@ -10852,12 +10881,17 @@ header {
   .tile header {
     padding: 1em; }
 
+.tile__heading {
+  cursor: pointer; }
+  .tile__heading .tile__heading__title {
+    color: #265b80;
+    font-size: 26px;
+    margin: 0; }
+
 @media screen and (min-width: 1024px) {
-  .mosaic {
-    background-color: #eae8de; }
-    .mosaic .indent {
-      width: 940px;
-      margin: 0 auto; }
+  .mosaic .indent {
+    width: 80%;
+    margin: 0 auto; }
   .tiles > .tile {
     padding: 0; } }
 
@@ -10881,3 +10915,11 @@ header {
 
 header.primary {
   text-align: center; }
+
+.indent {
+  margin: 0 5%; }
+
+@media all and (min-width: 1024px) {
+  .indent {
+    margin: 0 auto;
+    width: 90%; } }
