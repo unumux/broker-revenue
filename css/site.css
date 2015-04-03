@@ -10514,6 +10514,13 @@ thead {
     #impersonationWrapper p {
       margin: 0.25em 0.5em; } }
 
+body {
+  background-color: #265b80;
+  color: #fff; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff; }
+
 a img {
   border: none; }
 
@@ -10555,7 +10562,7 @@ header {
   clear: both; }
 
 .interaction {
-  width: 80%;
+  width: 100%;
   margin: 0 auto; }
 
 #accountsInput label, #employeesInput label, #comissionsInput label {
@@ -10569,6 +10576,27 @@ header {
 .math, #personalCommission {
   font-size: 50px;
   text-align: center; }
+
+.step {
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 9%;
+  background-color: #26526E; }
+
+.step-down {
+  float: left;
+  border-left: none;
+  border-radius: 0 3px 3px 0; }
+
+.step-up {
+  float: right;
+  border-right: none;
+  border-radius: 3px 0 0 3px; }
+
+#account-input-slider {
+  width: 80%;
+  margin: 20px 1% 0 1%;
+  float: left; }
 
 /* Functional styling;
  * These styles are required for noUiSlider to function.
@@ -10727,12 +10755,12 @@ header {
   background: #8394a1; }
 
 .noUi-base {
-  background: #265b80; }
+  background: #41AAC6;
+  border: 2px solid #244A64; }
 
 .noUi-origin {
-  background: #F2F4F5;
-  border-radius: 0;
-  border-top: 2px solid #ccd3d8; }
+  background: #26526E;
+  border-radius: 0; }
 
 .noUi-handle {
   border: none;
@@ -10832,9 +10860,6 @@ header {
       margin: 0 auto; }
   .tiles > .tile {
     padding: 0; } }
-
-h1 {
-  color: #7f2725; }
 
 .action {
   padding: 0;

@@ -1,9 +1,9 @@
 $(document).ready(function () {
-	$(".element-toggle", ".form-toggle").click(function () {
+	$(".element-toggle, .form-toggle").click(function () {
 		if($(this).next().hasClass("in")) {
 			$(this).next().collapse("toggle");
 		} else {
-			$(".collapse").collapse("hide");
+			$(".collapse.in").collapse("hide");
 			$(this).next().collapse("show");
 		}
 	});
