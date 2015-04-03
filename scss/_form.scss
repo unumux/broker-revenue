@@ -11,14 +11,39 @@
 	}
 }
 
-.interaction {
-	.interaction__section {
-	    width: 25%;
-	    float: left;
-	}
-	.interaction__label {
-	    width: 75%;
-	    float: left;
-	    margin-top: 6px;
-	}
+.interaction__section {
+    width: 25%;
+    float: left;
 }
+.interaction__label {
+	display: block;
+    margin-top: 6px;
+}
+
+.interaction__input {
+	border: 0;
+	color: #fff;
+	font-weight: bold;
+	background-color: transparent;
+	width: 25%;
+}
+
+
+.form {
+	
+}
+	.form__header {
+		
+	}
+
+	.form__header__interaction {
+		
+	}
+
+	.form__header__title {
+		
+	}
+
+	.form__header__summary {
+		
+	}

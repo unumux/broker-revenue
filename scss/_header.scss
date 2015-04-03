@@ -1,14 +1,37 @@
 //	Header
 //--------------------------------
 
-.header-primary {
+.header__primary {
 	overflow: hidden;
 	padding-top: 30px;
 }
-
 	.header__primary__logo {
 		float: left;
+		width: 35%;
 	}
+
 	.header__primary__title {
 		float: right;
+		clear: none;
+		font-size: 1.5em;
+		margin-top: 10px;
 	}
+
+
+@media all and (min-width: 480px) {	
+	.header__primary__title {
+		font-size: 30px;
+	}
+}
+
+
+
+@media all and (min-width: 1024px) {	
+	.header__primary__title {
+		font-size: 36px;
+	}
+	.header__primary__logo {
+		display: inline;
+		float: left;
+	}
+}

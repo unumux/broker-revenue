@@ -2,10 +2,30 @@
 //----------------------
 
 footer {
-	.copyright {
-		font-size: 12px;
-	}
 	.legal {
-		
+		font-size: 12px;
+		color: lighten($charcoal, 30%);
+		margin-top: 1em;
 	}
+}
+
+.footer__primary {
+	.form-toggle {
+		height: inherit;
+		display: block;
+		text-align: center;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+
+@media all and (min-width: 1024px) {
+	.footer__primary {
+		.form-toggle {
+			text-align: center;
+			width: 30%;
+		}
+	}
+
 }
