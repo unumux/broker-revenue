@@ -12,21 +12,30 @@
     <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
 </head>
 <body>
-    <header class="header__primary">
-        <div class="indent">
-            <a class="header__primary__logo" href="http://coloniallife.com/"><img src="img/logo-one-color.svg" alt="Colonial Life"></a>
-            <h1 class="header__primary__title">Broker Revenue</h1>
-        </div>
-    </header>
-    <main>
-        <article class="article">
-            <header class="indent article__heading">
-                <h1 class="article__title">Multiply Your Revenue!</h1>
-                <p class="article__summary">
-                  See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment.See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment<sup>1</sup>. 
-                </p>
-            </header>
 
+    <header class="header__primary">
+
+    <a class="logo" href="http://coloniallife.com/"><img src="img/logo-colonial-life.png" alt="Colonial Life"></a>
+  </header>
+  <main>
+    <article>
+      <h1>Multiply Your Revenue</h1>
+      <p>
+        See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment.See how our 1-to-1 benefit counseling model helps maximize participation and can yield 46% more voluntary commissions for your business than self-enrollment<sup>1</sup>. 
+      </p>
+      <section class="interaction">
+        <div id="accountsInput" class="input">
+                        <label for="number-of-accounts" id="accountsLabel">Accounts</label>
+                        <input type="text" id="number-of-accounts" value="12" pattern="[0-9]*">
+                        
+                        <div id="accountSlider" class="slider account">
+                           <div id="sliderAccount"></div>
+                           <div id="slider-range-value"></div>
+                        </div>
+        </div>
+        <div id="account-input-slider" class="slider"></div>
+        
+        <div class="math">x</div>
             <section class="article__content">
                 <div class="interaction">
                     <div id="accountsInput">
@@ -203,6 +212,7 @@
                             <label>Comment</label>
                             <textarea></textarea>
 
+
                             <button class="btn btn-steel-blue">Send</button>
                         </section>
                     </form>
@@ -214,17 +224,17 @@
                 </div>
           </footer>
       <!-- begin:js -->
-<script src="//localhost:35729/livereload.js"></script>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="js/bootstrap/collapse.js"></script>
-<script src="js/bootstrap/modal.js"></script>
-<script src="js/bootstrap/transition.js"></script>
-<script src="js/jquery.nouislider.js"></script>
-<script src="js/modernizr/modernizr.2.7.1.min.js"></script>
-<script src="js/nouislider.liblink.js"></script>
-<script src="js/script-brokerRevenue.js"></script>
-<script src="js/sliders.js"></script>
-<!-- end:js -->
+          <script src="//localhost:35729/livereload.js"></script>
+          <script src="bower_components/jquery/dist/jquery.min.js"></script>
+          <script src="js/bootstrap/collapse.js"></script>
+          <script src="js/bootstrap/modal.js"></script>
+          <script src="js/bootstrap/transition.js"></script>
+          <script src="js/jquery.nouislider.js"></script>
+          <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
+          <script src="js/nouislider.liblink.js"></script>
+          <script src="js/script-brokerRevenue.js"></script>
+          <script src="js/sliders.js"></script>
+      <!-- end:js -->
 
 </body>
 </html>
