@@ -32,9 +32,10 @@
             <section class="article__content">
                 <div class="interaction">
                     <div id="accountsInput">
-                        <label for="number-of-accounts" class="indent interaction__label" id="accountsLabel">Number of Accounts</label>
+
+                        <label for="numberOfAccounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
                         <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
-                        <input type="text" class="indent interaction__input" id="number-of-accounts" value="12" pattern="[0-9]*">
+                        <input type="text" class="indent interaction__input" id="numberOfAccounts" value="12" pattern="[0-9]*">
                         <div id="accountSlider" class="interaction__slider slider account">
                            <div id="sliderAccount"></div>
                            <div id="slider-range-value"></div>
@@ -46,10 +47,10 @@
                     <div class="step step__up">+</div> 
                     <div class="math">x</div>
                     
-                    <div id="employeesInput">
-                        <label for="number-of-employees" class="indent interaction__label" id="employeesLabel">Number of Employees per Account</label>
+                     <div id="employeesInput">
+                        <label for="numberOfEmployees" class="interaction__label" id="employeesLabel">Number of Employees per Account</label>
                         <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
-                        <input type="text" class="indent interaction__input" id="number-of-employees" onchange="updateCommission()">
+                        <input type="text" class="interaction__input" id="numberOfEmployees" onchange="updateCommission()">
                         <div id="employeesSlider" class="interaction__slider slider employee"></div>
                     </div>
                     
@@ -65,7 +66,7 @@
                         <p class="result__summary">Potential 1st-Year Voluntary Benefit.</p>
                     </div>
                     <div class="indent action">
-                        <button class="action-submit submit" onclick="updateCommission()">Calculate My Earnings!</button>
+                       <a id="calcBtn" href="broker-calculator.html" class="action__submit submit">Calculate My Earnings!</a> 
                     </div>
                 </div>
                 <div class="indent mosaic">
@@ -220,8 +221,10 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="js/bootstrap/collapse.js"></script>
 <script src="js/bootstrap/modal.js"></script>
+<script src="js/bootstrap/tab.js"></script>
 <script src="js/bootstrap/transition.js"></script>
 <script src="js/calculator-functionality.js"></script>
+<script src="js/jquery-cookie/jquery.cookie.js"></script>
 <script src="js/jquery.nouislider.js"></script>
 <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
 <script src="js/nouislider.liblink.js"></script>

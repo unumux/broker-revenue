@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -20,10 +21,64 @@
             <section class="row">
             <div id="tabs" class="col-md-12">
                 <ul class="nav nav-tabs noprint">
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#byAccount">By Account</a></li>
+                    <li><a href="#overview" data-toggle="tab">Overview</a></li>
+                    <li><a href="#byAccount" data-toggle="tab">By Account</a></li>
                 </ul>
-                <div id="overview" class="tabCntr">
+                <div class="tab-content">
+                     <div id="overview" class="interaction tab-pane active">
+                        <div id="accountsInput">
+                            <label for="numberOfAccounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
+                            <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
+                            <input type="text" class="indent interaction__input" id="numberOfAccounts" value="12" pattern="[0-9]*">
+                            <div id="accountSlider" class="interaction__slider slider account">
+                               <div id="sliderAccount"></div>
+                               <div id="slider-range-value"></div>
+                            </div>  
+                        </div>
+                        
+                        <div class="step step__down">-</div>
+                        <div id="account-input-slider" class="slider"></div>
+                        <div class="step step__up">+</div> 
+                        <div class="math">x</div>
+                        
+                         <div id="employeesInput">
+                            <label for="numberOfEmployees" class="interaction__label" id="employeesLabel">Number of Employees per Account</label>
+                            <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
+                            <input type="text" class="interaction__input" id="numberOfEmployees" onchange="updateCommission()">
+                            <div id="employeesSlider" class="interaction__slider slider employee"></div>
+                        </div>
+                        
+                        <div class="step step__down">-</div>
+                        <div id="employee-input-slider" class="slider"></div>
+                        <div class="step step__up">+</div> 
+                        <div class="math">=</div>
+                        
+                        <div class="result">
+                            <div id="personalCommission">
+                                <h1 class="result__title">$0</h1>
+                            </div>
+                            <p class="result__summary">Potential 1st-Year Voluntary Benefit.</p>
+                        </div>
+                        <div class="indent action">
+                           <a id="calcBtn" href="broker-calculator.html" class="action__submit submit">Calculate My Earnings!</a> 
+                        </div>
+                    </div>
+
+                    <div id="byAccount" class="interaction tab-pane">
+                    <div class="leftCol">
+                        <div class="titleText bottomBorder">Number of Employees</div>
+                        <ul id="accounts">
+                            <li id="addAccount"><span class="errorMsg">Please enter a number.</span><span class="accountName">Account 1</span> <input type="text" id="addAcct" maxlength="5" /><a href="javascript:void(0);" onclick="addAccount();" class="addAcctBtn">Add</a></li>
+                        </ul>
+                    </div>
+                    <div class="rightCol marginLeft170 width350">
+                        <div id="titleText" class="titleText">Potential 1st-Year VB Commissions <span class="normalText">(based on assumptions below)</span><sup>1</sup></div>
+                        <div class="firstYearRevenue"></div>
+                        <button id="calculateBtn2" class="btn btn-tangerine">Compare Your Earnings</button>
+                    </div>
+                </div>
+                </div>
+                <!-- <div id="overview" class="interaction tab-pane">
                     <div id="numbersRow">
                         <div class="">
                             <p><span>1</span> VB Accounts</p>
@@ -46,20 +101,7 @@
                         <div class="sliderCntr"><div id="slider2"></div></div>
                         <button id="calculateBtn" class="btn btn-tangerine">Compare Your Earnings</button>
                     </div>
-                </div>
-                <div id="byAccount" class="tabCntr">
-                    <div class="leftCol">
-                        <div class="titleText bottomBorder">Number of Employees</div>
-                        <ul id="accounts">
-                            <li id="addAccount"><span class="errorMsg">Please enter a number.</span><span class="accountName">Account 1</span> <input type="text" id="addAcct" maxlength="5" /><a href="javascript:void(0);" onclick="addAccount();" class="addAcctBtn">Add</a></li>
-                        </ul>
-                    </div>
-                    <div class="rightCol marginLeft170 width350">
-                        <div id="titleText" class="titleText">Potential 1st-Year VB Commissions <span class="normalText">(based on assumptions below)</span><sup>1</sup></div>
-                        <div class="firstYearRevenue"></div>
-                        <button id="calculateBtn2" class="btn btn-tangerine">Compare Your Earnings</button>
-                    </div>
-                </div>
+                </div> -->
             </div>
             </section>
         
@@ -263,8 +305,10 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="js/bootstrap/collapse.js"></script>
 <script src="js/bootstrap/modal.js"></script>
+<script src="js/bootstrap/tab.js"></script>
 <script src="js/bootstrap/transition.js"></script>
 <script src="js/calculator-functionality.js"></script>
+<script src="js/jquery-cookie/jquery.cookie.js"></script>
 <script src="js/jquery.nouislider.js"></script>
 <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
 <script src="js/nouislider.liblink.js"></script>

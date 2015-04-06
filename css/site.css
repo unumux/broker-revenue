@@ -10535,8 +10535,22 @@ img {
 .article .article__title {
   text-align: center; }
 
-footer .copyright {
-  font-size: 12px; }
+footer .legal {
+  font-size: 12px;
+  color: #5186a7;
+  margin-top: 1em; }
+
+.footer__primary .form-toggle {
+  height: inherit;
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto; }
+
+@media all and (min-width: 1024px) {
+  .footer__primary .form-toggle {
+    text-align: center;
+    width: 30%; } }
 
 .form-toggle {
   -webkit-align-content: center;
@@ -10552,23 +10566,45 @@ footer .copyright {
   .form-toggle h4 {
     color: #fff; }
 
-.interaction .interaction__section {
+.interaction__section {
   width: 25%;
   float: left; }
-.interaction .interaction__label {
-  width: 75%;
-  float: left;
+
+.interaction__label {
+  display: block;
   margin-top: 6px; }
 
-.header-primary {
+.interaction__input {
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  background-color: transparent;
+  width: 25%; }
+
+.header__primary {
   overflow: hidden;
   padding-top: 30px; }
 
 .header__primary__logo {
-  float: left; }
+  float: left;
+  width: 35%; }
 
 .header__primary__title {
-  float: right; }
+  float: right;
+  clear: none;
+  font-size: 1.5em;
+  margin-top: 10px; }
+
+@media all and (min-width: 480px) {
+  .header__primary__title {
+    font-size: 30px; } }
+
+@media all and (min-width: 1024px) {
+  .header__primary__title {
+    font-size: 36px; }
+  .header__primary__logo {
+    display: inline;
+    float: left; } }
 
 .clearfix:after, #accountsInput:after, #employeesInput:after, #comissionsInput:after {
   content: '';
@@ -10577,7 +10613,7 @@ footer .copyright {
 
 .action {
   text-align: center; }
-  .action .action__submit {
+  .action .action-submit {
     transition: background-color 0.2s linear;
     background-color: #67a14c;
     border-top: 0;
@@ -10587,7 +10623,7 @@ footer .copyright {
     border-radius: 3px;
     padding: 0.5em 3em;
     text-transform: uppercase; }
-    .action .action__submit:hover {
+    .action .action-submit:hover {
       transition: background-color 0.2s linear;
       background-color: #83b868; }
 
@@ -10887,6 +10923,9 @@ footer .copyright {
     color: #265b80;
     font-size: 26px;
     margin: 0; }
+
+.tile__heading__summary {
+  margin-top: 1em; }
 
 @media screen and (min-width: 1024px) {
   .mosaic .indent {

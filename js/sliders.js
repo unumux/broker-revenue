@@ -1,13 +1,24 @@
 // FOR ACCOUNT SLIDER
 var accSlider = $('#account-input-slider');
-var accInput = $('#number-of-accounts');
+var accInput = $('#numberOfAccounts');
 // FOR EMPLOYEES SLIDER
 var empSlider = $('#employee-input-slider');
-var empInput = $('#number-of-employees');
+var empInput = $('#numberOfEmployees');
+
+// FOR DEFAULT VALUES OF SLIDER
+var intAccountNumber = 12;
+var intEmployeesNumber = 100;
+
+if ($.cookie('accountNumber')) {
+  intAccountNumber = $.cookie('accountNumber');
+}
+if ($.cookie('employeesNumber')) {
+  intAccountNumber = $.cookie('employeesNumber');
+}
 
 //ACCOUNT SLIDER
 $('#account-input-slider').noUiSlider({
-  start: 12,
+  start: intAccountNumber,
   step: 1,
   range: {
     'min': 1,
@@ -24,7 +35,7 @@ $('#account-input-slider').noUiSlider({
 
 });
 
-$('#account-input-slider').Link('lower').to($('#number-of-accounts'));
+$('#account-input-slider').Link('lower').to($('#numberOfAccounts'));
 $('#account-input-slider').on('slide', function(){
   updateCommission();
 });
@@ -32,7 +43,7 @@ $('#account-input-slider').on('slide', function(){
 
 // EMPLOYEE SLIDER
 $('#employee-input-slider').noUiSlider({
-  start: 100,
+  start: intEmployeesNumber,
   step: 1,
   range: {
     'min': 1,
@@ -49,7 +60,7 @@ $('#employee-input-slider').noUiSlider({
 
 });
 
-$('#employee-input-slider').Link('lower').to($('#number-of-employees'));
+$('#employee-input-slider').Link('lower').to($('#numberOfEmployees'));
 $('#employee-input-slider').on('slide', function(){
   updateCommission();
 });
@@ -81,9 +92,9 @@ function displayPrettyAmount(amount) {
 
 var updateCommission = function() {
 
-  slider.employees = $('#number-of-employees').val();
-  slider.accounts = $('#number-of-accounts').val();
-  console.log($('#number-of-accounts'))
+  slider.employees = $('#numberOfEmployees').val();
+  slider.accounts = $('#numberOfAccounts').val();
+ // console.log($('#numberOfAccounts'))
   
   var commission = slider.accounts * 
                       slider.employees * 
@@ -91,7 +102,6 @@ var updateCommission = function() {
                       slider.participation * 
                       slider.grossCommissions * 
                       slider.persistencyAdjustment;
-  console.log(slider);
   commission = displayPrettyAmount(commission);
   $("#personalCommission").html(commission);
 };

@@ -8,6 +8,12 @@ $(document).ready(function () {
 		}
 	});
 
+	$("#calcBtn").click(function (e) {
+        //$(this).attr("href", $(this).attr("href") + "?accounts=" + $("#numberOfAccounts").val() + "&employees=" + $("#numberOfEmployees").val());
+        $.cookie('accountNumber', $("#numberOfAccounts").val());
+        $.cookie('employeeNumber', $("#numberOfEmployees").val());
+    });
+
 
 	// $("#sliderAccount").noUiSlider({
 	// 	start: [ 20000 ],
