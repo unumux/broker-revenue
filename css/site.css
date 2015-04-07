@@ -10627,6 +10627,10 @@ footer .legal {
       transition: background-color 0.2s linear;
       background-color: #83b868; }
 
+a.action-submit {
+  color: #fff;
+  text-decoration: none; }
+
 .result .result__title {
   font-family: 'Oswald Light', Arial, sans-serif;
   font-size: 50px; }
