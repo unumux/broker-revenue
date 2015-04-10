@@ -26,10 +26,10 @@
             <div id="tabs" class="col-md-12">
                 <ul class="nav nav-tabs noprint">
                     <li><a href="#overview" data-toggle="tab">Overview</a></li>
-                    <li><a href="#byAccount" data-toggle="tab">By Account</a></li>
+                    <li class="active"><a href="#byAccount" data-toggle="tab">By Account</a></li>
                 </ul>
                 <div class="tab-content">
-                     <div id="overview" class="interaction tab-pane active">
+                     <div id="overview" class="interaction tab-pane">
                         <div id="accountsInput">
                             <label for="numberOfAccounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
                             <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
@@ -68,44 +68,25 @@
                         </div>
                     </div>
 
-                    <div id="byAccount" class="interaction tab-pane">
-                    <div class="leftCol">
+                    <div id="byAccount" class="interaction tab-pane active">
+                    <div class="col-md-6">
                         <div class="titleText bottomBorder">Number of Employees</div>
                         <ul id="accounts">
-                            <li id="addAccount"><span class="errorMsg">Please enter a number.</span><span class="accountName">Account 1</span> <input type="text" id="addAcct" maxlength="5" /><a href="javascript:void(0);" onclick="addAccount();" class="addAcctBtn">Add</a></li>
+                            <li id="addAccount">
+                                <span class="errorMsg hide">Please enter a number.</span>
+                                <label class="accountName">Account 1</label> 
+                                <input type="text" id="addAcct" maxlength="5" />
+                                <button class="addAcctBtn">Add</button>
+                            </li>
                         </ul>
                     </div>
-                    <div class="rightCol marginLeft170 width350">
+                    <div id="revenue-col" class="col-md-6 hide">
                         <div id="titleText" class="titleText">Potential 1st-Year VB Commissions <span class="normalText">(based on assumptions below)</span><sup>1</sup></div>
                         <div class="firstYearRevenue"></div>
                         <button id="calculateBtn2" class="btn btn-tangerine">Compare Your Earnings</button>
                     </div>
                 </div>
                 </div>
-                <!-- <div id="overview" class="interaction tab-pane">
-                    <div id="numbersRow">
-                        <div class="">
-                            <p><span>1</span> VB Accounts</p>
-                        </div>
-                        <div class="">
-                            <img src="css/images/ui-multiply-sign.png" height="59" width="36" alt="" class="noprint"/>
-                        </div>
-                        <div class="">
-                            <p><span>10</span> Employees Each</p>
-                        </div>
-                        <div class="">
-                            <img src="css/images/ui-equal-sign.png" height="59" width="40" alt="" class="noprint"/>
-                        </div>
-                        <div class="">
-                            <p><span>$0</span> Potential 1st-Year VB Commissions (based on assumptions below)<sup>1</sup></p>
-                        </div>
-                    </div>
-                    <div id="controlsRow" class="noprint">
-                        <div class="sliderCntr"><div id="slider1"></div></div>
-                        <div class="sliderCntr"><div id="slider2"></div></div>
-                        <button id="calculateBtn" class="btn btn-tangerine">Compare Your Earnings</button>
-                    </div>
-                </div> -->
             </div>
             </section>
         
@@ -113,21 +94,21 @@
             <div id="introHolder">
                 <img src="css/images/intro-graph-bars.png" height="147" width="934" alt="" />
                 <div id="threeColHolder">
-                    <div class="threeCol marginLeft20">
+                    <div class="col-md-4">
                         <h3>Increase participation!</h3>
                         <img src="css/images/icon-shaking-hands.png" height="56" width="90" class="alignCenter marginTop10 marginBottom14" alt="" />
                         <p>
                             Our personal 1-to-1 approach produces higher participation and understanding, generating more revenue for you.
                         </p>
                     </div>
-                    <div class="threeCol marginLeft30">
+                    <div class="col-md-4">
                         <h3>Get A Bigger Piece of the Pie!</h3>
                         <img src="css/images/icon-pie-chart.png" height="65" width="65" class="alignCenter marginTop10 marginBottom5" alt="" />
                         <p>
                             We have some of the highest net commissions in the worksite industry.
                         </p>
                     </div>
-                    <div class="threeCol marginLeft30">
+                    <div class="col-md-4">
                         <h3>Earn Long-Term Revenue!</h3>
                         <img src="css/images/icon-airplane.png" height="63" width="68" class="alignCenter marginTop10 marginBottom7" alt="" />
                         <p>
@@ -138,13 +119,13 @@
                 </div>
             </div>
             <div id="reportHolder">
-                <div id="firstCol" class="floatLeft marginTop30">
+                <div id="firstCol" class="col-md-3">
                     <div class="rowTitle graphKey marginTop135 noprint">Your Time <sup>2</sup></div>
                     <div id="empPart" class="rowTitle marginTop55">Employee Participation</div>
                     <div class="rowTitle marginTop22">Annual Premium Per Employee <sup>2</sup></div>
                     <div class="rowTitle marginTop80">Net Commissions<sup>5</sup><br /><br /><span class="normalText">1st Year – Annual New Business Commission Earnings.<br /> <br /> 5th Year – Annual New Business & Renewal Commission Earnings</span></div>
                 </div>
-                <div id="secondCol" class="floatLeft marginTop30">
+                <div id="secondCol" class="col-md-3">
                     <h4>Self Enroll</h4>
                     <p>Little or no personal contact. Voluntary buy-up options for core benefits.</p>
                     <div class="noprint"><span class="threeQuarterChart"></span></div>
@@ -162,7 +143,7 @@
                         <div class="clearBoth"></div>                             
                     </div>
                 </div>
-                <div id="thirdCol" class="floatLeft marginTop30">
+                <div id="thirdCol" class="col-md-3">
                     <h4>Self Enroll</h4>
                     <p>Little or no personal contact. Voluntary products.</p>
                     <div class="noprint"><span class="threeQuarterChart"></span></div>
@@ -180,7 +161,7 @@
                         <div class="clearBoth"></div>                             
                     </div>
                 </div>
-                <div id="fourthCol" class="floatLeft marginTop30">
+                <div id="fourthCol" class="col-md-3">
                     <h4>Group Enrollment</h4>
                     <p>One person enrolls a group. Voluntary products.</p>
                     <div class="noprint"><span class="oneHalfChart"></span></div>
@@ -198,7 +179,7 @@
                         <div class="clearBoth"></div>                             
                     </div>
                 </div>
-                <div id="fifthCol" class="floatLeft marginTop30">
+                <div id="fifthCol" class="col-md-3">
                     <h4>Enrollment Firm</h4>
                     <p>One-on-one contact initially. Voluntary and/or core products.</p>
                     <div class="noprint"><span class="oneHalfChart"></span></div>
@@ -317,6 +298,7 @@
 <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
 <script src="js/nouislider.liblink.js"></script>
 <script src="js/script-brokerRevenue.js"></script>
+<script src="js/script-oldbroker.js"></script>
 <script src="js/sliders.js"></script>
 <!-- end:js -->
 
