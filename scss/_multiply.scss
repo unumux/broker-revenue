@@ -48,6 +48,50 @@ a.action-submit {
   text-align: center;
 }
 
+.math {
+    height: 22px;
+    width: 100%;
+    background: no-repeat 50% 50%;
+    position: relative;
+    margin: 20px 0;
+    
+    &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto 0;
+        height: 1px;
+        background: rgba(#fff, 0.25);
+    }
+    
+    &:before {
+        right: 50%;
+        margin-right: 30px;
+    }
+    
+    &:after {
+        left: 50%;
+        margin-left: 30px;
+    }
+}
+
+.multiplied {
+    background-image: url('../img/multiplied.svg');
+}
+
+.equals {
+    background-image: url('../img/equals.svg');
+}
+
+.slider-group {
+    display: flex;
+    align-items: center;
+}
+
 .step {
     background: darken($steel-blue, 10%) no-repeat 50% 50%;
     background-size: 20px auto;
@@ -57,7 +101,10 @@ a.action-submit {
     padding: 5px;
     height: 1.9em;
     text-align: center;
-    width: 12%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 55px;
+    height: 40px;
     cursor: pointer;
     user-select: none;
 
@@ -67,14 +114,12 @@ a.action-submit {
 }
 
 .step__down {
-  float: left;
   border-left: none;
   border-radius: 0 3px 3px 0;
   background-image: url('../img/minus.svg');
 }
 
 .step__up {
-  float: right;
   border-right: none;
   border-radius: 3px 0 0 3px;
   background-image: url('../img/plus.svg');
@@ -82,9 +127,8 @@ a.action-submit {
 
 #account-input-slider,
 #employee-input-slider {
-  width: 66%;
-  margin: 20px 5% 0 5%;
-  float: left;
+  flex: 1;
+  margin: 0 30px;
 }
 
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 23</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Mobile/Home-Page" sketch:type="MSArtboardGroup" transform="translate(-149.000000, -368.000000)" fill-opacity="0.66" fill="#FFFFFF">
+            <g id="Rectangle-23-+-Rectangle-91-+-Rectangle-92" sketch:type="MSLayerGroup" transform="translate(0.000000, 368.000000)">
+                <path d="M157.700212,11 L149.190969,2.49075648 C148.930524,2.23031215 148.938569,1.82162665 149.1956,1.56459534 L150.564595,0.195600354 C150.817755,-0.0575597359 151.236283,-0.0635045803 151.490756,0.190968785 L160,8.7002123 L168.509244,0.190968785 C168.763717,-0.0635045803 169.182245,-0.0575597359 169.435405,0.195600354 L170.8044,1.56459534 C171.061431,1.82162665 171.069476,2.23031215 170.809031,2.49075648 L162.299788,11 L170.809031,19.5092435 C171.069476,19.7696879 171.061431,20.1783734 170.8044,20.4354047 L169.435405,21.8043996 C169.182245,22.0575597 168.763717,22.0635046 168.509244,21.8090312 L160,13.2997877 L151.490756,21.8090312 C151.236283,22.0635046 150.817755,22.0575597 150.564595,21.8043996 L149.1956,20.4354047 C148.938569,20.1783734 148.930524,19.7696879 149.190969,19.5092435 L157.700212,11 Z" id="Rectangle-23" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
