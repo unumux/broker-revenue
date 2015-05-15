@@ -10688,7 +10688,8 @@ a.action-submit {
   text-align: center; }
 
 .step {
-  background-color: #1a4059;
+  background: #1a4059 no-repeat 50% 50%;
+  background-size: 20px auto;
   transition: 0.4s background-color;
   border: 1px solid #fff;
   font-size: 1.5em;
@@ -10706,12 +10707,14 @@ a.action-submit {
 .step__down {
   float: left;
   border-left: none;
-  border-radius: 0 3px 3px 0; }
+  border-radius: 0 3px 3px 0;
+  background-image: url('../img/minus.svg'); }
 
 .step__up {
   float: right;
   border-right: none;
-  border-radius: 3px 0 0 3px; }
+  border-radius: 3px 0 0 3px;
+  background-image: url('../img/plus.svg'); }
 
 #account-input-slider, #employee-input-slider {
   width: 66%;

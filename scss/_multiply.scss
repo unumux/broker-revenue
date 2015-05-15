@@ -35,13 +35,13 @@ a.action-submit {
     }
 }
 
-#accountsInput, 
+#accountsInput,
 #employeesInput,
 #comissionsInput {
   @extend .clearfix;
 }
 
-.math, 
+.math,
 #personalCommission {
   font-family: 'Oswald Light', Arial, sans-serif;
   font-size: 50px;
@@ -49,7 +49,8 @@ a.action-submit {
 }
 
 .step {
-    background-color: darken($steel-blue, 10%); 
+    background: darken($steel-blue, 10%) no-repeat 50% 50%;
+    background-size: 20px auto;
     transition: 0.4s background-color;
     border: 1px solid #fff;
     font-size: 1.5em;
@@ -68,12 +69,14 @@ a.action-submit {
   float: left;
   border-left: none;
   border-radius: 0 3px 3px 0;
+  background-image: url('../img/minus.svg');
 }
 
 .step__up {
   float: right;
   border-right: none;
   border-radius: 3px 0 0 3px;
+  background-image: url('../img/plus.svg');
 }
 
 #account-input-slider,
@@ -95,4 +98,3 @@ a.action-submit {
         display: none;
     }
 }
-
