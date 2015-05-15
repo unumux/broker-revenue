@@ -36,6 +36,7 @@ $('#account-input-slider').noUiSlider({
 });
 
 $('#account-input-slider').Link('lower').to($('#numberOfAccounts'));
+$('#account-input-slider').Link('lower').to('-inline-');
 $('#account-input-slider').on('slide', function(){
   updateCommission();
 });
@@ -61,6 +62,7 @@ $('#employee-input-slider').noUiSlider({
 });
 
 $('#employee-input-slider').Link('lower').to($('#numberOfEmployees'));
+$('#employee-input-slider').Link('lower').to('-inline-');
 $('#employee-input-slider').on('slide', function(){
   updateCommission();
 });

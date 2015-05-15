@@ -10682,6 +10682,9 @@ a.action-submit {
   text-align: center;
   margin-bottom: 2em; }
 
+#accountsInput input, #employeesInput input {
+  display: none; }
+
 .math, #personalCommission {
   font-family: 'Oswald Light', Arial, sans-serif;
   font-size: 50px;
@@ -10723,7 +10726,8 @@ a.action-submit {
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin: 20px 0; }
 
 .step {
   background: #1a4059 no-repeat 50% 50%;
@@ -10761,6 +10765,12 @@ a.action-submit {
       -ms-flex: 1;
           flex: 1;
   margin: 0 30px; }
+
+#accountsLabel, #employeesLabel {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0 5%; }
 
 @media all and (min-width: 1024px) {
   #account-input-slider, #employee-input-slider {
@@ -10986,6 +10996,16 @@ a.action-submit {
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 8px solid #5b7183; }
+
+.noUi-handle > div {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  top: -1.7em; }
 
 .mosaic {
   overflow: hidden;

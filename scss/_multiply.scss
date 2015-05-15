@@ -41,6 +41,13 @@ a.action-submit {
   @extend .clearfix;
 }
 
+#accountsInput,
+#employeesInput {
+    input {
+        display: none;
+    }
+}
+
 .math,
 #personalCommission {
   font-family: 'Oswald Light', Arial, sans-serif;
@@ -90,6 +97,7 @@ a.action-submit {
 .slider-group {
     display: flex;
     align-items: center;
+    margin: 20px 0;
 }
 
 .step {
@@ -129,6 +137,14 @@ a.action-submit {
 #employee-input-slider {
   flex: 1;
   margin: 0 30px;
+}
+
+#accountsLabel,
+#employeesLabel {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 5%;
 }
 
 

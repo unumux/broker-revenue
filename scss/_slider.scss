@@ -92,3 +92,14 @@
     border-right: 8px solid transparent;
     border-bottom: 8px solid $slate;
 }
+
+.noUi-handle > div {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    top: -1.7em;
+}
