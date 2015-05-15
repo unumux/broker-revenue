@@ -106,3 +106,13 @@ var updateCommission = function() {
   $("#personalCommission").html(commission);
 };
 
+
+$('.step__down').on('click', function() {
+    var slider = $(this).next();
+    slider.val(parseInt(slider.val()) - 1);
+});
+
+$('.step__up').on('click', function() {
+    var slider = $(this).prev();
+    slider.val(parseInt(slider.val()) + 1);
+});
