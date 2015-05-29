@@ -30,17 +30,14 @@
             </header>
 
             <section class="article__content">
-                
-            <!-- Take it out -->
                 <ul class="nav nav-tabs noprint indent">
                     <li><a href="#overview" data-toggle="tab">Overview</a></li>
                     <li class="active"><a href="#byAccount" data-toggle="tab">By Account</a></li>
                 </ul>
-                <div class="tab-content">
+                <di v class="tab-content">
                      <div id="overview" class="interaction tab-pane">
                         <div id="accountsInput">
                             <label for="numberOfAccounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
-                            <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
                             <input type="text" class="indent interaction__input" id="numberOfAccounts" value="12" pattern="[0-9]*">
                             <div id="accountSlider" class="interaction__slider slider account">
                                <div id="sliderAccount"></div>
@@ -74,25 +71,23 @@
                         </div>
                     </div>
                     <div id="byAccount" class="interaction tab-pane active">
-                    <div class="col-md-6">
-                        <div class="titleText bottomBorder">Number of Employees</div>
-                        <ul id="accounts">
-                            <li id="addAccount">
-                                <span class="errorMsg hide">Please enter a number.</span>
-                                <label class="accountName">Account 1</label> 
-                                <input type="text" id="addAcct" maxlength="5" />
-                                <button class="addAcctBtn">Add</button>
-                            </li>
-                        </ul>
+                        <div class="">
+                            <div class="titleText bottomBorder">Number of Employees</div>
+                            <ul id="accounts">
+                                <li id="addAccount">
+                                    <span class="errorMsg hide">Please enter a number.</span>
+                                    <label class="accountName">Account 1</label> 
+                                    <input type="text" id="addAcct" maxlength="5" />
+                                    <button class="addAcctBtn">Add</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="revenue-col" class="indent">
+                            <h1 id="titleText" class="firstYearRevenue"></h1>
+                            <p>Potential 1st-Year VB Commissions</p>
+                            <p class="normalText">(based on assumptions below)<sup>1</sup></p>
+                        </div>
                     </div>
-                    <div id="revenue-col" class="">
-                        <h1 id="titleText" class="">Potential 1st-Year VB Commissions </h1>
-                        <p class="normalText">(based on assumptions below)<sup>1</sup></p>
-                        <div class="firstYearRevenue"></div>
-                    </div>
-
-                    <!-- Take it out above this line -->
-                </div>
                 
             <article class="chart__content contain">
                 <ul>
