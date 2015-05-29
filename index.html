@@ -45,25 +45,32 @@
                             <div id="accountSlider" class="interaction__slider slider account">
                                <div id="sliderAccount"></div>
                                <div id="slider-range-value"></div>
-                            </div>  
+                            </div>
+                        </div>
+                        <div class="slider-group">
+                            <div class="step step__down"></div>
+                            <div id="account-input-slider" class="slider"></div>
+                            <div class="step step__up"></div>
                         </div>
                         
-                        <div class="step step__down">-</div>
-                        <div id="account-input-slider" class="slider"></div>
-                        <div class="step step__up">+</div> 
-                        <div class="math">x</div>
+                        <div class="math multiplied"></div>
                         
-                         <div id="employeesInput">
+      
+                        
+                        <div id="employeesInput">
                             <label for="numberOfEmployees" class="interaction__label" id="employeesLabel">Number of Employees per Account</label>
                             <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
                             <input type="text" class="interaction__input" id="numberOfEmployees" onchange="updateCommission()">
                             <div id="employeesSlider" class="interaction__slider slider employee"></div>
                         </div>
-                        
-                        <div class="step step__down">-</div>
-                        <div id="employee-input-slider" class="slider"></div>
-                        <div class="step step__up">+</div> 
-                        <div class="math">=</div>
+
+                        <div class="slider-group">
+                            <div class="step step__down"></div>
+                            <div id="employee-input-slider" class="slider"></div>
+                            <div class="step step__up"></div>
+                        </div>
+                            
+                        <div class="math equals"></div>
                         
                         <div class="result">
                             <div id="personalCommission">
@@ -88,117 +95,12 @@
                             </li>
                         </ul>
                     </div>
-
-                    <!-- Take it out above this line -->
-                <div class="tab-content">
-                     <div id="overview" class="interaction tab-pane">
-                        <div id="accountsInput">
-                            <label for="numberOfAccounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
-                            <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
-                            <input type="text" class="indent interaction__input" id="numberOfAccounts" value="12" pattern="[0-9]*">
-                            <div id="accountSlider" class="interaction__slider slider account">
-                               <div id="sliderAccount"></div>
-                               <div id="slider-range-value"></div>
-                            </div>  
-                        </div>
-                        
-                        <div class="step step__down">-</div>
-                        <div id="account-input-slider" class="slider"></div>
-                        <div class="step step__up">+</div> 
-                        <div class="math">x</div>
-                        
-                         <div id="employeesInput">
-                            <label for="numberOfEmployees" class="interaction__label" id="employeesLabel">Number of Employees per Account</label>
-                            <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
-                            <input type="text" class="interaction__input" id="numberOfEmployees" onchange="updateCommission()">
-                            <div id="employeesSlider" class="interaction__slider slider employee"></div>
-                        </div>
-                        
-                        <div class="step step__down">-</div>
-                        <div id="employee-input-slider" class="slider"></div>
-                        <div class="step step__up">+</div> 
-                        <div class="math">=</div>
-                        
-                        <div class="result">
-                            <div id="personalCommission">
-                                <h1 class="result__title">$0</h1>
-                            </div>
-                            <p class="result__summary">Potential 1st-Year Voluntary Benefit.</p>
-                        </div>
-                        <div class="indent action">
-                           <a id="calcBtn" href="broker-calculator.html" class="action-submit submit">Calculate My Earnings!</a> 
-                        </div>
+                    <div id="revenue-col" class="col-md-6 hide">
+                        <div id="titleText" class="titleText">Potential 1st-Year VB Commissions <span class="normalText">(based on assumptions below)</span><sup>1</sup></div>
+                        <div class="firstYearRevenue"></div>
+                        <button id="calculateBtn2" class="btn btn-tangerine">Compare Your Earnings</button>
                     </div>
 
-
-
-
-
-
-                <div class="interaction">
-
-                    <ul class="nav nav-tabs noprint">
-                        <li><a href="#overview" data-toggle="tab">Overview</a></li>
-                        <li class="active"><a href="#byAccount" data-toggle="tab">By Account</a></li>
-                    </ul>
-
-                    <div id="byAccount" class="interaction tab-pane active">
-                    <div class="col-md-6">
-                        <div class="titleText bottomBorder">Number of Employees</div>
-                        <ul id="accounts">
-                            <li id="addAccount">
-                                <span class="errorMsg hide">Please enter a number.</span>
-                                <label class="accountName">Account 1</label> 
-                                <input type="text" id="addAcct" maxlength="5" />
-                                <button class="addAcctBtn">Add</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div id="accountsInput">
-
-                        <label for="numberOfAccounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
-                        <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
-                        <input type="text" class="indent interaction__input" id="numberOfAccounts" value="12" pattern="[0-9]*">
-                        <div id="accountSlider" class="interaction__slider slider account">
-                           <div id="sliderAccount"></div>
-                           <div id="slider-range-value"></div>
-                        </div>
-                    </div>
-
-                    <div class="slider-group">
-                        <div class="step step__down"></div>
-                        <div id="account-input-slider" class="slider"></div>
-                        <div class="step step__up"></div>
-                    </div>
-                    
-                    <div class="math multiplied"></div>
-
-                     <div id="employeesInput">
-                        <label for="numberOfEmployees" class="interaction__label" id="employeesLabel">Number of Employees per Account</label>
-                        <!-- HEY SOMEONE!!!!!! USE JS to grab this input and hide the original and place the input above the ui-slider handle element -->
-                        <input type="text" class="interaction__input" id="numberOfEmployees" onchange="updateCommission()">
-                        <div id="employeesSlider" class="interaction__slider slider employee"></div>
-                    </div>
-
-                    <div class="slider-group">
-                        <div class="step step__down"></div>
-                        <div id="employee-input-slider" class="slider"></div>
-                        <div class="step step__up"></div>
-                    </div>
-                        
-                    <div class="math equals"></div>
-
-                    <div class="result">
-                        <div id="personalCommission">
-                            <h1 class="result__title">$0</h1>
-                        </div>
-                        <p class="result__summary">Potential 1st-Year Voluntary Benefit.</p>
-                    </div>
-                    <div class="indent action">
-                       <a id="calcBtn" href="broker-calculator.html" class="action-submit submit">Calculate My Earnings!</a>
-                    </div>
-                </div>
 
             <article class="chart__content contain">
                 <ul>
@@ -353,11 +255,8 @@
                         <div class="chartLegend">1st Year</div>
                         <div class="chartLegend secondChartLegend">5th Year</div>
                                             
-                    </div>
-                </div>
-            </div>
-        </article>
 
+                </div>
                 <div class="indent mosaic">
                     <ul id="accordion" class="mosaic__tiles">
                         <li class="tile">
