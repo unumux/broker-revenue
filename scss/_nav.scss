@@ -1,0 +1,26 @@
+.nav {
+	border-bottom: 1px solid rgba(255,255,255, .2);
+	margin: 0;
+	padding: 0;
+	&__tab {
+		@include transition(background-color, .2s, linear);
+		background-color: rgba(255, 255, 255, .4);
+		padding: 1em;
+		margin: 0;
+		text-align: center;
+		display: inline-block;
+		&:hover {
+			@include transition(background-color, .2s, linear);
+			background-color: rgba(255, 255, 255, 1);
+		}
+		&.active {
+			@include transition(background-color, .2s, linear);
+			background-color: rgba(255, 255, 255, .9);
+		}
+		a {
+			display: block;
+			text-decoration: none;
+		}
+
+	}
+}
