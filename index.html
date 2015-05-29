@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- begin:css -->
-    <link rel="stylesheet" type="text/css" href="css/site.css">
-    <!-- end:css -->
+<link rel="stylesheet" type="text/css" href="css/site.css">
+<!-- end:css -->
     <script src="js/modernizr/modernizr.2.7.1.min.js"></script>
 </head>
 <body>
@@ -29,11 +29,14 @@
                 </p>
             </header>
             <section class="article__content">
-                <ul class="nav nav-tabs noprint indent">
-                    <li><a href="#overview" data-toggle="tab">Overview</a></li>
-                    <li class="active"><a href="#byAccount" data-toggle="tab">By Account</a></li>
-                </ul>
-                <di v class="tab-content">
+                <div class="">
+                    <ul class="nav nav-tabs noprint">
+                        <li><a href="#overview" data-toggle="tab">Overview</a></li>
+                        <li class="active"><a href="#byAccount" data-toggle="tab">By Account</a></li>
+                    </ul>
+                </div>
+                
+                <div class="tab-content">
                     <div id="overview" class="interaction tab-pane">
                         <div id="accountsInput">
                             <label for="numberOfAccounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
@@ -69,10 +72,10 @@
                             <p class="result__summary">Potential 1st-Year Voluntary Benefit.</p>
                         </div>
                     </div>
-                    <div id="byAccount" class="interaction tab-pane active">
-                        <div class="">
-                            <div class="titleText bottomBorder">Number of Employees</div>
-                            <ul id="accounts">
+                    <div id="byAccount" class="interaction tab-pane active indent">
+                        <div class="accounts">
+                            <h1 class="accounts__title">Number of Employees</h1>
+                            <ul id="accounts" class="accounts__content">
                                 <li id="addAccount">
                                     <span class="errorMsg hide">Please enter a number.</span>
                                     <label class="accountName">Account 1</label> 
