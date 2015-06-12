@@ -37,7 +37,7 @@
                 </nav>
                 
                 <div class="tab-content">
-                    <div id="overview" class="interaction tab-pane">
+                    <div id="overview" class="interaction tab-pane active">
                         <div id="accountsInput">
                             <label for="numberOfAccounts" class="interaction__label" id="accountsLabel">Number of Accounts</label>
                             <input type="text" class="indent interaction__input" id="numberOfAccounts" value="12" pattern="[0-9]*">
@@ -53,7 +53,7 @@
                         </div>
                         <div class="math multiplied"></div>
                         <div id="employeesInput">
-                            <label for="numberOfEmployees" class="interaction__label" id="employeesLabel">Number of Employees per Account</label>
+                            <label for="numberOfEmployees" class="interaction__label" id="employeesLabel">Employees per Account</label>
                             <input type="text" class="interaction__input" id="numberOfEmployees" onchange="updateCommission()">
                             <div id="employeesSlider" class="interaction__slider slider employee"></div>
                         </div>
@@ -70,9 +70,10 @@
                                 <h1 class="result__title">$0</h1>
                             </div>
                             <p class="result__summary">Potential 1st-Year Voluntary Benefit.</p>
+                            <button class="btn btn-pumpkin">UPDATE EARNINGS CHART</button>
                         </div>
                     </div>
-                    <div id="byAccount" class="interaction tab-pane active indent">
+                    <div id="byAccount" class="interaction tab-pane indent">
                         <div class="accounts">
                             <h1 class="accounts__title">Number of Employees</h1>
                             <ul id="accounts" class="accounts__content">
@@ -90,35 +91,36 @@
                             <p class="normalText">(based on assumptions below)<sup>1</sup></p>
                         </div>
                     </div>
+                    </div>
                     <article class="chart__content contain">
                         <ul>
                             <li id="secondCol">
                                 <h3>Self Enroll</h3>
                                 <p>Little or no personal contact. Voluntary buy-up options for core benefits.</p>
-                                <ul>
+                                <ul class="chart__results">
                                     <li>
-                                        Your Time
+                                        <h4>Your Time Spent</h4>
                                     </li>
                                     <li>
-                                        Employee Participation
+                                        <h4>Employee Participation</h4>
                                         <span class="participationPercent">26%</span>
                                     </li>
                                     <li>
-                                        Annual Premium Per Employee
+                                        <h4>Annual Premium Per Employee</h4>
                                         <span class="annualPremimum">$216</span>
                                     </li>
                                     <li>
                                         Net Commissions
                                         <ul>
                                             <li>
-                                                <span class="chartValue">1st Year</span>
+                                                <span class="chartLegend">1st Year</span>
                                                 <div class="chart"></div>
-                                                <span class="chartLegend"></span>
+                                                <span class="chartValue"></span>
                                             </li>
                                             <li>
-                                                <span class="chartValue secondChartValue">2nd Year</span>
+                                                <span class="chartValue secondChartLegend">5th Year</span>
                                                 <div class="chart secondChart"></div>
-                                                <span class="chartLegend secondChartLegend"></span>
+                                                <span class="chartLegend secondChartValue"></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -127,30 +129,30 @@
                             <li id="thirdCol">
                                 <h3>Self Enroll</h3>
                                 <p>Little or no personal contact. Voluntary products.</p>
-                                 <ul>
+                                 <ul class="chart__results">
                                     <li>
-                                        Your Time
+                                        <h4>Your Time Spent</h4>
                                     </li>
                                     <li>
-                                        Employee Participation
+                                        <h4>Employee Participation</h4>
                                         <span class="participationPercent">26%</span>
                                     </li>
                                     <li>
-                                        Annual Premium Per Employee
-                                        <span class="annualPremimum">$216</span>
+                                        <h4>Annual Premium Per Employee</h4>
+                                        <span class="annualPremimum">$432</span>
                                     </li>
                                     <li>
                                         Net Commissions
                                         <ul>
                                             <li>
-                                                <span class="chartValue">1st Year</span>
-                                                <div class="chart"></div>
-                                                <span class="chartLegend"></span>
+                                                <span class="chartLegend">1st Year</span>
+                                                <div class="chart">$10,000</div>
+                                                <span class="chartValue"></span>
                                             </li>
                                             <li>
-                                                <span class="chartValue secondChartValue">2nd Year</span>
+                                                <span class="chartValue secondChartLegend">5th Year</span>
                                                 <div class="chart secondChart"></div>
-                                                <span class="chartLegend secondChartLegend"></span>
+                                                <span class="chartLegend secondChartValue"></span>
                                             </li>
                                         </ul>
                                     </li>
@@ -160,245 +162,105 @@
                                 <h3>Group Enrollment</h3>
                                 <p>One person enrolls a group. Voluntary products.</p>
 
-                                <ul>
+                                <ul class="chart__results">
                                     <li>
+                                    	<h4>Your Time Spent</h4>
                                     </li>
                                     <li>
+                                    	<h4>Employee Participation</h4>
+                                    	<span class="participationPercent">39%</span>
+                                    </li>
+                                    <li>
+                                    	<h4>Annual Premium Per Employee</h4>
+                                    	<span class="annualPremimum">$432</span>
+                                    </li>
+                                    <li>
+                                        <h4>Net Commissions</h4>
+                                        <ul>
+                                            <li>
+                                                <span class="chartLegend">1st Year</span>
+                                                <div class="chart"></div>
+                                                <span class="chartValue">$25,000</span>
+                                            </li>
+                                            <li>
+                                                <span class="chartValue secondChartLegend">5th Year</span>
+                                                <div class="chart secondChart"></div>
+                                                <span class="chartLegend secondChartValue">$41,000</span>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
                              <li id="fifthCol">
-                            </li>
-                        </ul>
-                        <div id="thirdCol" class="col-md-3">
-                            <h3>Self Enroll</h3>
-                            <p>Little or no personal contact. Voluntary products.</p>
-                            <div class="noprint"><span class="threeQuarterChart"></span></div>
-                            <div class="particpationPercent">26%<sup>3</sup></div>
-                            <div class="annualPremium">$432</div>
-                            <div class="chartContainer">
-                                <div class="chartValue">$10,000</div>
-                                <div class="chartValue secondChartValue">$14,000</div>
-                                <div class="clearBoth"></div>          
-                                <div class="chart"></div>
-                                <div class="chart secondChart"></div>
-                                <div class="clearBoth"></div>                    
-                                <div class="chartLegend">1st Year</div>
-                                <div class="chartLegend secondChartLegend">5th Year</div>
-                                <div class="clearBoth"></div>                             
-                            </div>
-                        </div>
-                        <div id="fourthCol" class="col-md-3">
-                            <h3>Group Enrollment</h3>
-                            <p></p>
-                            <div class="noprint"><span class="oneHalfChart"></span></div>
-                            <div class="particpationPercent">39%<sup>3</sup></div>
-                            <div class="annualPremium">$432</div>
-                            <div class="chartContainer">
-                                <div class="chartValue">$25,000</div>
-                                <div class="chartValue secondChartValue">$41,000</div>
-                                <div class="clearBoth"></div>          
-                                <div class="chart"></div>
-                                <div class="chart secondChart"></div>
-                                <div class="clearBoth"></div>                    
-                                <div class="chartLegend">1st Year</div>
-                                <div class="chartLegend secondChartLegend">5th Year</div>
-                                <div class="clearBoth"></div>                             
-                            </div>
-                        </div>
-                        <div id="fifthCol" class="col-md-3">
-                            <h3>Enrollment Firm</h3>
-                            <p>One-on-one contact initially. Voluntary and/or core products.</p>
-                            <div class="noprint"><span class="oneHalfChart"></span></div>
-                            <div class="particpationPercent">38%<sup>3</sup></div>
-                            <div class="annualPremium">$707</div>
-                            <div class="chartContainer">
-                                <div class="chartValue">$47,000</div>
-                                <div class="chartValue secondChartValue">$141,000</div>
-                                <div class="clearBoth"></div>          
-                                <div class="chart"></div>
-                                <div class="chart secondChart"></div>
-                                <div class="clearBoth"></div>                    
-                                <div class="chartLegend">1st Year<sup>5</sup></div>
-                                <div class="chartLegend secondChartLegend">5th Year<sup>5</sup></div>
-                                <div class="clearBoth"></div>                             
-                            </div>
-                        </div>
-                        <div id="shapeCol" class="floatLeft">
-                        </div>
-                        <div id="colonialCol" class="floatLeft">
-                            <h3>Colonial Life Enrollment</h3>
-                            <p>1-to-1 benefits counseling. Voluntary and/or core products.</p>
-                            <div class="noprint"><span class="oneQuarterChart"></span></div>
-                            <div class="particpationPercent">50%<sup>4</sup></div>
-                            <div class="annualPremium">$707</div>
-                            <div class="chartContainer">
-                                <div class="chartValue">$57,000</div>
-                                <div class="chartValue secondChartValue">$1,141,000</div>                                
-                                <div class="chart"></div>
-                                <div class="chart secondChart"></div>
-                                <div class="clearBoth"></div>                  
-                                <div class="chartLegend">1st Year</div>
-                                <div class="chartLegend secondChartLegend">5th Year</div>
-                                                    
-                            </div>
-                        </div>
-                    <article class="chart__content contain">
-                <ul>
-                    <li id="secondCol">
-                        <h3>Self Enroll</h3>
-                        <p>Little or no personal contact. Voluntary buy-up options for core benefits.</p>
+                             	<h3>Enrollment Firm</h3>
+                             	<p>One-on-one contact initially. Voluntary and/or core products.</p>
 
-                        <ul>
-                            <li>
-                                Your Time
-                            </li>
-                            <li>
-                                Employee Participation
-                                <span class="participationPercent">26%</span>
-                            </li>
-                            <li>
-                                Annual Premium Per Employee
-                                <span class="annualPremimum">$216</span>
-                            </li>
-                            <li>
-                                Net Commissions
-                                <ul>
-                                    <li>
-                                        <span class="chartValue">1st Year</span>
-                                        <div class="chart"></div>
-                                        <span class="chartLegend"></span>
+                             	<ul class="chart__results">
+                             		<li>
+                                    	<h4>Your Time Spent</h4>
                                     </li>
                                     <li>
-                                        <span class="chartValue secondChartValue">2nd Year</span>
-                                        <div class="chart secondChart"></div>
-                                        <span class="chartLegend secondChartLegend"></span>
+                                    	<h4>Employee Participation</h4>
+                                    	<span class="participationPercent">38%</span>
                                     </li>
-                                </ul>
+                                    <li>
+                                    	<h4>Annual Premium Per Employee</h4>
+                                    	<span class="annualPremimum">$707</span>
+                                    </li>
+                                    <li>
+                                        Net Commissions
+                                        <ul>
+                                            <li>
+                                                <span class="chartLegend">1st Year</span>
+                                                <div class="chart"></div>
+                                                <span class="chartValue">$47,000</span>
+                                            </li>
+                                            <li>
+                                                <span class="chartValue secondChartLegend">5th Year</span>
+                                                <div class="chart secondChart"></div>
+                                                <span class="chartLegend secondChartValue">$141,000</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                             	</ul>
                             </li>
-                        </ul>
-                    </li>
-                    <li id="thirdCol">
-                        <h3>Self Enroll</h3>
-                        <p>Little or no personal contact. Voluntary products.</p>
-                         <ul>
-                                <li>
-                                    Your Time
-                                </li>
-                                <li>
-                                    Employee Participation
-                                    <span class="participationPercent">26%</span>
-                                </li>
-                                <li>
-                                    Annual Premium Per Employee
-                                    <span class="annualPremimum">$216</span>
-                                </li>
-                                <li>
-                                    Net Commissions
-                                    <ul>
-                                        <li>
-                                            <span class="chartValue">1st Year</span>
-                                            <div class="chart"></div>
-                                            <span class="chartLegend"></span>
-                                        </li>
-                                        <li>
-                                            <span class="chartValue secondChartValue">2nd Year</span>
-                                            <div class="chart secondChart"></div>
-                                            <span class="chartLegend secondChartLegend"></span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                    </li>
-                    <li id="fourthCol">
-                        <h3>Group Enrollment</h3>
-                        <p>One person enrolls a group. Voluntary products.</p>
 
-                        <ul>
-                            <li>
-                            </li>
-                            <li>
+                            <li class="sixthCol">
+                            	<h3>Colonial Life Enrollment</h3>
+                            	<p>1-to-1 benefits counseling. Voluntary and/or core products.</p>
+
+                            	<ul class="chart__results">
+                             		<li>
+                                    	<h4>Your Time Spent</h4>
+                                    </li>
+                                    <li>
+                                    	<h4>Employee Participation</h4>
+                                    	<span class="participationPercent">50%</span>
+                                    </li>
+                                    <li>
+                                    	<h4>Annual Premium Per Employee</h4>
+                                    	<span class="annualPremimum">$707</span>
+                                    </li>
+                                    <li>
+                                        <h4>Net Commissions</h4>
+                                        <ul>
+                                            <li>
+                                                <span class="chartLegend">1st Year</span>
+                                                <div class="chart"></div>
+                                                <span class="chartValue">$57,000</span>
+                                            </li>
+                                            <li>
+                                                <span class="chartValue secondChartLegend">5th Year</span>
+                                                <div class="chart secondChart"></div>
+                                                <span class="chartLegend secondChartValue">$1,141,000</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                             	</ul>
                             </li>
                         </ul>
-                    </li>
-                     <li id="fifthCol">
-                    </li>
-                </ul>
+                 </article>       
             
-                <div id="thirdCol" class="col-md-3">
-                    <h3>Self Enroll</h3>
-                    <p>Little or no personal contact. Voluntary products.</p>
-                    <div class="noprint"><span class="threeQuarterChart"></span></div>
-                    <div class="particpationPercent">26%<sup>3</sup></div>
-                    <div class="annualPremium">$432</div>
-                    <div class="chartContainer">
-                        <div class="chartValue">$10,000</div>
-                        <div class="chartValue secondChartValue">$14,000</div>
-                        <div class="clearBoth"></div>          
-                        <div class="chart"></div>
-                        <div class="chart secondChart"></div>
-                        <div class="clearBoth"></div>                    
-                        <div class="chartLegend">1st Year</div>
-                        <div class="chartLegend secondChartLegend">5th Year</div>
-                        <div class="clearBoth"></div>                             
-                    </div>
-                </div>
-                <div id="fourthCol" class="col-md-3">
-                    <h3>Group Enrollment</h3>
-                    <p></p>
-                    <div class="noprint"><span class="oneHalfChart"></span></div>
-                    <div class="particpationPercent">39%<sup>3</sup></div>
-                    <div class="annualPremium">$432</div>
-                    <div class="chartContainer">
-                        <div class="chartValue">$25,000</div>
-                        <div class="chartValue secondChartValue">$41,000</div>
-                        <div class="clearBoth"></div>          
-                        <div class="chart"></div>
-                        <div class="chart secondChart"></div>
-                        <div class="clearBoth"></div>                    
-                        <div class="chartLegend">1st Year</div>
-                        <div class="chartLegend secondChartLegend">5th Year</div>
-                        <div class="clearBoth"></div>                             
-                    </div>
-                </div>
-                <div id="fifthCol" class="col-md-3">
-                    <h3>Enrollment Firm</h3>
-                    <p>One-on-one contact initially. Voluntary and/or core products.</p>
-                    <div class="noprint"><span class="oneHalfChart"></span></div>
-                    <div class="particpationPercent">38%<sup>3</sup></div>
-                    <div class="annualPremium">$707</div>
-                    <div class="chartContainer">
-                        <div class="chartValue">$47,000</div>
-                        <div class="chartValue secondChartValue">$141,000</div>
-                        <div class="clearBoth"></div>          
-                        <div class="chart"></div>
-                        <div class="chart secondChart"></div>
-                        <div class="clearBoth"></div>                    
-                        <div class="chartLegend">1st Year<sup>5</sup></div>
-                        <div class="chartLegend secondChartLegend">5th Year<sup>5</sup></div>
-                        <div class="clearBoth"></div>                             
-                    </div>
-                </div>
-                <div id="shapeCol" class="floatLeft">
-                </div>
-                <div id="colonialCol" class="floatLeft">
-                    <h3>Colonial Life Enrollment</h3>
-                    <p>1-to-1 benefits counseling. Voluntary and/or core products.</p>
-                    <div class="noprint"><span class="oneQuarterChart"></span></div>
-                    <div class="particpationPercent">50%<sup>4</sup></div>
-                    <div class="annualPremium">$707</div>
-                    <div class="chartContainer">
-                        <div class="chartValue">$57,000</div>
-                        <div class="chartValue secondChartValue">$1,141,000</div>                                
-                        <div class="chart"></div>
-                        <div class="chart secondChart"></div>
-                        <div class="clearBoth"></div>                  
-                        <div class="chartLegend">1st Year</div>
-                        <div class="chartLegend secondChartLegend">5th Year</div>     
-                    </div>
-                </div>
-                </div>
-                </article>
                 <div class="indent mosaic">
                     <ul id="accordion" class="mosaic__tiles">
                         <li class="tile">

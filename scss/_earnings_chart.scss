@@ -1,0 +1,52 @@
+.chart__content {
+	background: #fff;
+	border:1em solid $pewter;
+	color: $slate;
+	font-size:.8em;
+	padding:.8em 1em;
+
+	p {
+		color: $charcoal;
+		margin:0 0 1.5em;
+	}
+
+	h3 {
+		color: $dark-red;
+		font-family: 'Oswald Light';
+		margin:0 0 .5em;
+	}
+
+	h4 {
+		font-size:1em;
+		font-weight:400;
+		color: $slate;
+	}
+
+	ul {
+		list-style-type:none;
+		padding:0;
+	}
+}
+
+.chart__results {
+	li {
+		margin:0 0 2em;
+		display: table;
+	}
+
+	span,
+	div,
+	h4 {
+		display:table-cell;
+	}
+
+	h4 {
+		width:80%;
+	}
+}
+
+.participationPercent,
+.annualPremimum {
+	color: $steel-blue;
+	font-size:1.5em;
+}

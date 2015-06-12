@@ -1,0 +1,20 @@
+.tab-content {
+	background: #fff;
+	color: $pewter;
+	padding:1.5em 1em 1.75em;
+
+	h1 {
+		color: $pewter;
+		font-size:1.5em;
+		margin:0 0 .5em;
+	}
+
+	.btn {
+		border:none;
+		border-radius:3px;
+		font-weight:400;
+		letter-spacing:.05em;
+		padding:.8em;
+		width:100%;
+	}
+}
